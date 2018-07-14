@@ -1,8 +1,11 @@
 <template>
-  <div class="quote">
-    <q class="quote__text">{{ quote }}</q>
-    <cite class="quote__source">{{ source }}</cite>
-  </div>
+  <figure class="home-quote">
+    <blockquote class="home-quote__text">
+      {{ quote }}
+    </blockquote>
+    <figcaption class="home-quote__source">{{ source }}</figcaption>
+  </figure>
+
 </template>
 
 <script>
@@ -16,3 +19,27 @@ export default {
   }
 };
 </script>
+
+<style lang="sass">
+
+.home-quote
+  width: 15rem
+  margin: 0
+
+  &__text
+    margin: 0
+    text-align: center
+
+    &::before
+      content: "“"
+
+    &::after
+      content: "”"
+
+  &__source
+    text-align: center
+
+    &::before
+      content: "– "
+
+</style>
