@@ -13,8 +13,8 @@ export default {
   data() {
     return {
       quote:
-        "From time to time, the tree of liberty must be watered with the blood of tyrants and patriots.",
-      source: "Thomas Jefferson"
+        "Write your code as if the person who will end up maintaining it is a violent psychopath with your home address.",
+      source: "Reddit"
     };
   }
 };
@@ -28,7 +28,6 @@ export default {
 
   &__text
     margin: 0
-    text-align: center
 
     &::before
       content: "“"
@@ -37,7 +36,6 @@ export default {
       content: "”"
 
   &__source
-    text-align: center
 
     &::before
       content: "– "

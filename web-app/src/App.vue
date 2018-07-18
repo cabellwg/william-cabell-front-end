@@ -1,20 +1,20 @@
 <template>
   <div id="app">
-    <TheHeader></TheHeader>
-    <div id="nav">
-      <router-link to="/">Home</router-link>
-      <router-link to="/about">About</router-link>
-    </div>
+    <the-sidebar/>
     <router-view/>
   </div>
 </template>
 
 <script>
-import TheHeader from "./components/TheHeader.vue";
+import TheSidebar from "./components/the-sidebar.vue";
 
 export default {
   components: {
-    TheHeader
+    TheSidebar
   }
 };
 </script>
+
+<style lang="sass">
+@import "styles/main"
+</style>
