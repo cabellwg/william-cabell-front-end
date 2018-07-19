@@ -28,20 +28,26 @@
     flex-direction: column
     justify-content: center
 
-    height: 2.5rem
+    height: 3rem
     width: 100%
     margin: 0
 
     color: $bg-color
     text-decoration: none
+    font-weight: 300
+    font-style: italic
 
     label
       display: block
       transform: rotate(90deg)
 
+      width: 150%
       margin: 0
+      margin-left: -22%
 
       cursor: pointer
+
+      text-align: center
 
     &:nth-child(1)
       background-color: $light-grey
@@ -54,5 +60,11 @@
 
     &:nth-child(4)
       background-color: $black
+
+    &:hover
+      background-color: $bg-color
+      color: $text-color
+      transition: background-color .1s
+      transition: color .1s
 
 </style>

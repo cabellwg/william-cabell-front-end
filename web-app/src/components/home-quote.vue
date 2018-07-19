@@ -31,10 +31,13 @@ export default {
   margin-top: 30vh
 
   &__text
-    width: 10.5rem
+    width: 10.6rem
     margin: 0
+    margin-bottom: 1vh
 
+    line-height: 1.2
     text-align: justify
+    font-weight: 300
 
     &::before
       content: "“"
@@ -47,6 +50,7 @@ export default {
 
     text-align: right
     font-style: italic
+    font-weight: 600
 
     &::before
       content: "– "
