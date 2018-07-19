@@ -27,24 +27,32 @@
     flex-grow: 1
     flex-direction: column
     justify-content: center
-    align-items: center
 
     height: 2.5rem
+    width: 100%
     margin: 0
 
-    color: $text-color
+    color: $bg-color
     text-decoration: none
-
-    &:hover
-      background-color: $black
-      color: $bg-color
 
     label
       display: block
       transform: rotate(90deg)
 
-      margin: 0 auto
+      margin: 0
 
       cursor: pointer
+
+    &:nth-child(1)
+      background-color: $light-grey
+
+    &:nth-child(2)
+      background-color: $mid-grey
+
+    &:nth-child(3)
+      background-color: $dark-grey
+
+    &:nth-child(4)
+      background-color: $black
 
 </style>

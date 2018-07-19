@@ -21,13 +21,20 @@ export default {
 </script>
 
 <style lang="sass">
-
 .home-quote
-  width: 15rem
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+
   margin: 0
+  margin-top: 30vh
 
   &__text
+    width: 10.5rem
     margin: 0
+
+    text-align: justify
 
     &::before
       content: "“"
@@ -36,8 +43,11 @@ export default {
       content: "”"
 
   &__source
+    width: 10.5rem
+
+    text-align: right
+    font-style: italic
 
     &::before
       content: "– "
-
 </style>

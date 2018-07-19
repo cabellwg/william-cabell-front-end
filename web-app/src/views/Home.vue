@@ -1,5 +1,5 @@
 <template>
-  <div class="home --respect-sidebar">
+  <div class="home">
     <h2 class="home__title">William Cabell</h2>
     <home-quote />
   </div>
@@ -14,3 +14,12 @@ export default {
   }
 };
 </script>
+
+<style lang="sass">
+.home
+  text-align: center
+
+  &__title
+    margin-top: 0
+    padding-top: 5vh
+</style>
