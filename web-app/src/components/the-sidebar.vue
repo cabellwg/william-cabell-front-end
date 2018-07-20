@@ -32,10 +32,12 @@
     width: 100%
     margin: 0
 
+    font-size: 1.15rem
     color: $bg-color
     text-decoration: none
     font-weight: 300
     font-style: italic
+    letter-spacing: -0.03rem
 
     label
       display: block
