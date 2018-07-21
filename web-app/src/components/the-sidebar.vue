@@ -2,7 +2,7 @@
   <div id="nav" class="nav">
     <router-link class="nav__item" to="/"><label>Home</label></router-link>
     <router-link class="nav__item" to="/portfolio"><label>Portfolio</label></router-link>
-    <router-link class="nav__item" to="/resume"><label>Resumé</label></router-link>
+    <router-link class="nav__item" to="/resume"><label>Résumé</label></router-link>
     <router-link class="nav__item" to="/contact"><label>Contact</label></router-link>
   </div>
 </template>
@@ -11,6 +11,7 @@
 @import "../styles/variables"
 
 .nav
+  position: fixed
   float: left
 
   display: flex
@@ -66,7 +67,7 @@
     &:hover
       background-color: $bg-color
       color: $text-color
-      transition: background-color .1s
+      transition: "background-color" .1s
       transition: color .1s
 
 </style>

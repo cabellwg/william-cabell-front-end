@@ -1,7 +1,7 @@
 <template>
   <figure class="home-quote">
     <blockquote class="home-quote__text">
-      {{ `“${quote.text}”` }}
+      “{{ quote.text }}”
     </blockquote>
     <a :href="quote.link" target="_blank" class="home-quote__source">{{ quote.source || "Anonymous" }}</a>
   </figure>
@@ -29,8 +29,8 @@ export default {
   align-items: center
   justify-content: center
 
+  flex-grow: 3
   margin: 0
-  margin-top: 30vh
 
   &__text
     width: 12rem
