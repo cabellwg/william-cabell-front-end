@@ -8,9 +8,22 @@
         <img class="home__logo" src="../assets/gitlab-logo.svg" alt="Go to my Gitlab" />
       </a>
     </div>
-    <caption class="home__bottom-text"><i>Themes</i>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<i>v0.0.1 (Removed Herobrine)</i></caption>
+    <caption class="home__bottom-text">
+      <i class="home__bottom-text--interactable" @click="$emit('update:showThemes', !showThemes)">Themes</i>
+      <span class="home__bottom-text-divider">|</span>
+      <i>v0.0.1</i>
+    </caption>
   </footer>
 </template>
+
+<script>
+export default {
+  props: {
+    showThemes: Boolean
+  }
+};
+</script>
+
 
 <style lang="sass">
 @import "../styles/variables"
@@ -38,18 +51,23 @@
   &__bottom-text
     margin-bottom: 1rem
 
-    cursor: pointer
-
     text-align: center
     font-size: 0.8rem
     color: $mid-grey
     font-weight: 300
     text-decoration: none
 
-    i:hover
-      color: $text-color
-      transition: .1s color
+    &--interactable
+      cursor: pointer
 
+      &:hover
+        color: $text-color
+        transition: .1s color
+
+    &-divider
+      margin-left: 0.75rem
+      margin-right: 0.75rem
 .--lighten
   opacity: 0.875
+
 </style>

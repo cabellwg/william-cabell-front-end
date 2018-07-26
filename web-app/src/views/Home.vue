@@ -4,18 +4,27 @@
 
     <home-quote />
 
-    <home-footer />
+    <home-footer :show-themes.sync="showThemes" />
+
+    <themes-modal v-if="showThemes" :show-themes.sync="showThemes" />
   </main>
 </template>
 
 <script>
 import HomeQuote from "../components/home-quote.vue";
 import HomeFooter from "../components/home-footer.vue";
+import ThemesModal from "../components/themes-modal.vue";
 
 export default {
   components: {
     HomeQuote,
-    HomeFooter
+    HomeFooter,
+    ThemesModal
+  },
+  data: function() {
+    return {
+      showThemes: false
+    };
   }
 };
 </script>
