@@ -34,15 +34,18 @@
     <resume-list v-bind="education.highSchool" />
   </section>
 
+  <block-footer class="block-footer--uncentered" />
   </div>
 </template>
 
 <script>
+import BlockFooter from "../components/block-footer.vue";
 import ResumeList from "../components/resume-list.vue";
 import ResumeRepository from "../models/resume-repository.js";
 
 export default {
   components: {
+    BlockFooter,
     ResumeList
   },
   data: function() {
@@ -102,5 +105,8 @@ export default {
     font-size: 1.7rem
     font-style: italic
 
+.block-footer--uncentered
+  @include media("<tablet")
+    margin-left: 3rem
 
 </style>

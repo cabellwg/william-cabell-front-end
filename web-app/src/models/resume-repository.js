@@ -42,7 +42,7 @@ export default class ResumeRepository {
           id: 1,
           name: "ASP.NET Core MVC",
           description:
-            "Experience using ASP.NET Core MVC and the associated RESTful Web API to build powerful, computation-heavy, data-driven web applications."
+            "Experience using ASP.NET Core MVC and its RESTful Web API to build powerful, computation-heavy, data-driven web applications."
         },
         {
           id: 2,
@@ -62,7 +62,7 @@ export default class ResumeRepository {
           id: 5,
           name: "Unity game development",
           description:
-            "Familiarity game development using the Unity game engine with C#. Familiarity with basic 3D modeling."
+            "Familiarity with game development using the Unity game engine with C#. Familiarity with basic 3D modeling."
         }
       ]
     },

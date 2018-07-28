@@ -1,25 +1,34 @@
 <template>
-  <footer class="home__footer">
-    <div class="home__logos">
+  <footer class="block-footer__footer">
+    <div class="block-footer__logos">
       <a href="https://www.linkedin.com/in/william-cabell-16180/" target="_blank">
-        <img class="home__logo --lighten" src="../assets/linkedin-logo.png" alt="Go to my LinkedIn" />
+        <img class="block-footer__logo --lighten" src="../assets/linkedin-logo.png" alt="Go to my LinkedIn" />
       </a>
       <a href="https://gitlab.com/cabellwg" target="_blank">
-        <img class="home__logo" src="../assets/gitlab-logo.svg" alt="Go to my Gitlab" />
+        <img class="block-footer__logo" src="../assets/gitlab-logo.svg" alt="Go to my Gitlab" />
       </a>
     </div>
-    <caption class="home__bottom-text">
-      <i class="home__bottom-text--interactable" @click="$emit('update:showThemes', !showThemes)">Themes</i>
-      <span class="home__bottom-text-divider">|</span>
+    <caption class="block-footer__bottom-text">
+      <i class="block-footer__bottom-text--interactable" @click="showThemes = !showThemes">Themes</i>
+      <span class="block-footer__bottom-text-divider">|</span>
       <i>v0.0.1</i>
     </caption>
+
+    <themes-modal :show-themes.sync="showThemes" />
   </footer>
 </template>
 
 <script>
+import ThemesModal from "./themes-modal.vue";
+
 export default {
-  props: {
-    showThemes: Boolean
+  components: {
+    ThemesModal
+  },
+  data: function() {
+    return {
+      showThemes: false
+    };
   }
 };
 </script>
@@ -28,7 +37,7 @@ export default {
 <style lang="sass">
 @import "../styles/variables"
 
-.home
+.block-footer
   &__footer
     display: flex
     flex-direction: column
