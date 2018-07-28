@@ -6,7 +6,7 @@
 
     <home-footer :show-themes.sync="showThemes" />
 
-    <themes-modal v-if="showThemes" :show-themes.sync="showThemes" />
+    <themes-modal :show-themes.sync="showThemes" />
   </main>
 </template>
 

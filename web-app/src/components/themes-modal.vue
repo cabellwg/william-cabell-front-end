@@ -1,5 +1,6 @@
 <template>
-  <div class="modal">
+  <transition name="modal">
+  <div class="modal" v-if="showThemes">
     <button class="modal__x" @click="$emit('update:showThemes', !showThemes)">
       &times;
     </button>
@@ -7,6 +8,7 @@
       <h3>Pick a theme</h3>
     </div>
   </div>
+  </transition>
 </template>
 
 <script>
@@ -55,5 +57,22 @@ export default {
     padding: 5%
 
     background-color: $bg-color
+
+  // Transitions
+
+  &-enter, &-leave-to
+    opacity: 0
+
+  &-enter-active
+    transition: opacity .4s
+
+    .modal__container
+      animation: zoomIn 0.5s forwards
+
+  &-leave-active
+    transition: opacity .4s
+
+    .modal__container
+      animation: zoomOut 0.5s forwards
 
 </style>
