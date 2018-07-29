@@ -1,5 +1,5 @@
 <template>
-  <form class="contact-form" method="post">
+  <form class="contact-form" action="sendMessage">
       <div class="contact-form__field">
         <label
           for="name"
@@ -11,7 +11,8 @@
           name="name"
           autocomplete="on name"
           required
-          class="contact-form__input" />
+          class="contact-form__input"
+          v-model="name" />
     </div>
 
     <div class="contact-form__field">
@@ -26,7 +27,8 @@
       <input
         type="text"
         name="organization"
-        class="contact-form__input" />
+        class="contact-form__input"
+        v-model="organization" />
     </div>
 
     <div class="contact-form__field">
@@ -39,7 +41,8 @@
         type="email"
         name="email"
         autocomplete="on email"
-        class="contact-form__input" />
+        class="contact-form__input"
+        v-model="email" />
     </div>
 
     <div class="contact-form__field contact-form__field--tall">
@@ -50,7 +53,8 @@
       </label>
       <textarea
         name="message"
-        class="contact-form__input contact-form__textarea">
+        class="contact-form__input contact-form__textarea"
+        v-model="message">
       </textarea>
     </div>
 
@@ -65,7 +69,26 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data: function() {
+    return {
+      name: "",
+      organization: "",
+      email: "",
+      message: ""
+    };
+  },
+  computed: {
+    buildMessage: function() {
+
+    }
+  },
+  methods: {
+    sendMessage: function() {
+
+    }
+  }
+};
 </script>
 
 <style lang="sass">
