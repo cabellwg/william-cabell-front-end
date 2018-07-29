@@ -6,6 +6,8 @@
       william16180@gmail.com
     </a> or fill out this handy form, and I'll get back to you as soon as I can!</p>
 
+    <hr />
+
     <contact-form />
 
     <block-footer />
@@ -36,6 +38,15 @@ export default {
   min-height: 100vh
 
   text-align: center
+
+  hr
+    width: 20vw
+    max-width: 150px
+    height: 3px
+    margin: 3vh 1rem
+    border: none
+
+    background-color: $text-color
 
   @include media("<tablet")
     margin-left: 3rem

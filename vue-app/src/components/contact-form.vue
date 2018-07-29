@@ -40,6 +40,7 @@
       <input
         type="email"
         name="email"
+        required
         autocomplete="on email"
         class="contact-form__input"
         v-model="email" />
@@ -53,6 +54,7 @@
       </label>
       <textarea
         name="message"
+        required
         class="contact-form__input contact-form__textarea"
         v-model="message">
       </textarea>
