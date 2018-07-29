@@ -23,7 +23,7 @@ export default {
 @import "../styles/variables"
 
 .modal
-  position: absolute
+  position: fixed
   top: 0
   bottom: 0
   left: 0
