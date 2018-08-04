@@ -1,6 +1,6 @@
 <template>
   <div class="contact">
-    <h1 class="contact__header">Get in touch!</h1>
+    <h1 class="contact__header">Contact</h1>
 
     <p class="contact__text">You can email me at <a href="mailto:william16180@gmail.com" class="contact__text--link">
       william16180@gmail.com

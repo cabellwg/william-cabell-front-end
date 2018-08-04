@@ -1,5 +1,5 @@
 <template>
-  <form class="contact-form" action="sendMessage">
+  <form class="contact-form">
       <div class="contact-form__field">
         <label
           for="name"
@@ -61,11 +61,12 @@
     </div>
 
     <div class="contact-form__field contact-form__field--submit">
-      <input
-        type="submit"
-        name="submit"
-        value="Send"
-        class="contact-form__submit-button" />
+      <button
+        type="button"
+        @click="sendMessage"
+        class="contact-form__submit-button">
+        Send
+      </button>
     </div>
   </form>
 </template>
@@ -81,13 +82,26 @@ export default {
     };
   },
   computed: {
-    buildMessage: function() {
-
+    formData: function() {
+      return {
+        name: this.name,
+        organization: this.organization,
+        email: this.email,
+        message: this.message
+      };
     }
   },
   methods: {
     sendMessage: function() {
+      let contactUrl = "http://0.0.0.0:5000/api/contact";
 
+      let request = new Request(contactUrl, {
+        method: "POST",
+        mode: "no-cors",
+        body: this.formData
+      });
+
+      fetch(request);
     }
   }
 };
@@ -149,7 +163,7 @@ export default {
     overflow: auto
     resize: none
 
-input[type="submit"].contact-form__submit-button
+  &__submit-button
     display: block
     box-sizing: border-box
 
