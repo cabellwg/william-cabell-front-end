@@ -62,11 +62,18 @@
 
     <div class="contact-form__field contact-form__field--submit">
       <button
+        id="send-button"
         type="button"
         @click="sendMessage"
         class="contact-form__submit-button">
         Send
       </button>
+      <transition name="fade" mode="out-in">
+        <div v-if="loading" class="spinner__container">
+          <div class="spinner"></div>
+        </div>
+        <div v-if="sent" id="sent" class="sent">Sent!</div>
+      </transition>
     </div>
   </form>
 </template>
@@ -78,7 +85,9 @@ export default {
       name: "",
       organization: "",
       email: "",
-      message: ""
+      message: "",
+      loading: false,
+      sent: false
     };
   },
   computed: {
@@ -93,15 +102,41 @@ export default {
   },
   methods: {
     sendMessage: function() {
-      let contactUrl = "http://0.0.0.0:5000/api/contact";
+      this.sendButtonPressed();
+
+      let contactUrl = "api/contact";
 
       let request = new Request(contactUrl, {
         method: "POST",
-        mode: "no-cors",
-        body: this.formData
+        headers: new Headers({
+          // eslint-disable-next-line
+          "Accept": "application/json",
+          "Content-Type": "application/json"
+        }),
+        body: JSON.stringify(this.formData)
       });
 
-      fetch(request);
+      fetch(request).then(() => {
+        this.finished();
+      });
+    },
+    sendButtonPressed: function() {
+      let sendButton = document.getElementById("send-button");
+      sendButton.disabled = true;
+      sendButton.innerHTML = "Sending...";
+      this.sent = false;
+      this.loading = true;
+    },
+    finished: function() {
+      let sendButton = document.getElementById("send-button");
+      sendButton.disabled = false;
+      sendButton.innerHTML = "Send";
+      this.loading = false;
+      this.sent = true;
+
+      setTimeout(() => {
+        this.sent = false;
+      }, 3000);
     }
   }
 };
@@ -125,6 +160,9 @@ export default {
 
     &--tall
       flex: 1 1 auto
+
+    &--submit
+      position: relative
 
   &__label
     display: block
@@ -165,6 +203,7 @@ export default {
 
   &__submit-button
     display: block
+    float: left
     box-sizing: border-box
 
     width: 60%
@@ -183,5 +222,61 @@ export default {
       color: $text-color
       transition: "background-color" .1s
       transition: color .1s
+
+    &[disabled]
+      background-color: $bg-color
+      color: $text-color
+      cursor: default
+
+  .spinner
+    position: absolute
+    left: 60%
+    // This is brilliant, and I can't take credit for it. This came from https://codepen.io/Beaugust/pen/DByiE.
+    box-sizing: border-box
+    width: 2.5rem
+    height: 2.5rem
+    margin-top: 0.55rem
+    margin-left: 1rem
+    border-radius: 100%
+    border: 0.25rem solid rgba(255, 255, 255, 0)
+    border-top-color: $text-color
+    animation: spin 0.35s infinite linear
+
+    &-enter, &-leave
+      opacity: 0
+
+      &-active
+        transition: opacity .1s
+
+
+  .sent
+    position: absolute
+    left: 60%
+
+    box-sizing: border-box
+    margin: 0.2rem 0rem
+    border: 1px solid rgba(255, 255, 255, 0)
+    padding: 1rem
+
+    font-weight: 800
+    font-style: italic
+
+.fade
+  &-enter
+    opacity: 0
+
+    &-active
+      transition: opacity .1s
+
+  &-leave
+    &-active
+      transition: opacity .3s
+
+    &-to
+      opacity: 0
+
+@keyframes spin
+  100%
+    transform: rotate(360deg)
 
 </style>

@@ -1,4 +1,5 @@
 .DS_Store
+.auth_keys.json
 node_modules
 /dist
 
