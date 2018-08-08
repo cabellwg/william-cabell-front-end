@@ -1,7 +1,7 @@
 <template>
   <div id="nav" class="nav">
     <router-link class="nav__item" to="/"><label>Home</label></router-link>
-    <router-link class="nav__item" to="/portfolio"><label>Portfolio</label></router-link>
+    <router-link class="nav__item" to="/projects"><label>Projects</label></router-link>
     <router-link class="nav__item" to="/resume"><label>Résumé</label></router-link>
     <router-link class="nav__item" to="/contact"><label>Contact</label></router-link>
   </div>
@@ -22,6 +22,12 @@
   height: 100vh
   width: 3rem
 
+  box-shadow: none
+  transition: box-shadow .1s
+
+  &:hover
+    box-shadow: -1.1rem 0 .75rem 1rem #000
+    transition: box-shadow .1s
 
   &__item
     display: flex
@@ -64,6 +70,8 @@
     &:nth-child(4)
       background-color: $black
 
+    transition: "background-color" .1s
+    transition: color .1s
     &:hover
       background-color: $bg-color
       color: $text-color

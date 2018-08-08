@@ -176,6 +176,8 @@ export default {
 
     color: $bg-color
 
+    transition: "background-color" .1s
+    transition: color .1s
     &:hover
       background-color: $bg-color
       color: $text-color

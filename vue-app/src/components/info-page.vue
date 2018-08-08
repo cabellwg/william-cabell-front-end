@@ -1,10 +1,11 @@
 <template>
   <div class="info-page">
     <section class="intro">
-      <slot name="intro"></slot>
+      <slot name="intro-heading"></slot>
+      <slot name="intro-text"></slot>
     </section>
 
-    <section class="info-page__section" v-for="index of numberOfFields" :key="index" ref="sections">
+    <section v-for="index of numberOfFields" :key="index" ref="sections">
       <slot :name="index"></slot>
     </section>
 
@@ -37,20 +38,23 @@ export default {
 
 .info-page
   &--dark
-    background-color: $black
-    color: $bg-color
-
-    hr
-      background-color: $bg-color
-
-  &--light
-    background-color: $bg-color
+    background-color: $really-light-grey
     color: $text-color
+    border-color: $text-color
 
     hr
       background-color: $text-color
 
-  section
+  &--light
+    background-color: $bg-color
+    color: $text-color
+    border-color: $text-color
+
+    hr
+      background-color: $text-color
+
+  > section
+    margin-left: 3rem
     padding: 15vh 5vh
 
     hr
@@ -62,9 +66,14 @@ export default {
       border: none
 
 .intro
-  &__heading
+  h2
     font-size: 1.7rem
     font-style: italic
+    max-width: 768px
+
+  p
+    font-weight: 300
+    max-width: 768px
 
 .block-footer--uncentered
   @include media("<tablet")

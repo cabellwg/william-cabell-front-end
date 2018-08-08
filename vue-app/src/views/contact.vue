@@ -68,12 +68,13 @@ export default {
     font-weight: 300
 
     &--link
-      color: $text-color
-      font-weight: 500
-      text-decoration: none
+      font-weight: 600
+      text-decoration: underline
+      font-style: italic
+      color: inherit
 
       &:hover
-        text-decoration: underline
+        color: $mid-grey
 
   &-form
     flex-grow: 2

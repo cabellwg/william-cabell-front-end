@@ -34,6 +34,7 @@ export default {
   align-items: center
 
   background-color: #222222aa
+  transition: opacity .4s
 
   &__x
     display: block

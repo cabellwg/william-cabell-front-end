@@ -123,7 +123,7 @@ export default class ResumeRepository {
           id: 0,
           name: "Cabell Design Studio",
           description:
-            "Developed a professional portofolio website from scratch with jQuery, the Sass preprocesser, PHP, and AJAX. Hosted on an Apache server. See portfolio page for more information."
+            "Developed a professional portofolio website from scratch with jQuery, the Sass preprocesser, and AJAX on a standard LAMP stack (although no MySQL). See projects page for more information."
         }
       ]
     }

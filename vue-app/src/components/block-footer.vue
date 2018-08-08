@@ -53,6 +53,9 @@ export default {
     justify-content: center
     align-items: flex-end
 
+    a::after
+      display: none
+
   &__logo
     width: 2.5rem
     margin: 1rem 1.5rem
@@ -69,6 +72,7 @@ export default {
     &--interactable
       cursor: pointer
 
+      transition: .1s color
       &:hover
         color: $text-color
         transition: .1s color

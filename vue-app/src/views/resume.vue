@@ -1,11 +1,9 @@
 <template>
   <info-page :number-of-fields="3">
 
-  <section slot="intro">
-    <h2 class="intro__heading">Résumé</h2>
-    <p class="resume__text">I'm a curious, goal-oriented, hard-working mathematics major at Virginia Tech interested in mathematics research and software development. I'm a self-taught full-stack web developer, an enthusiastic mathematician, and a massive data nerd. In my free time, you can find me programming, playing music, playing with electronics, reading textbooks, Wikipedia, or lengthy online thinkpieces, listening to podcasts, cooking, running, swimming, cycling, or sailing.
-    </p>
-  </section>
+  <h2 slot="intro-heading">Résumé</h2>
+  <p slot="intro-text">I'm a curious, goal-oriented, hard-working mathematics major at Virginia Tech interested in mathematics research and software development. I'm a self-taught full-stack web developer, an enthusiastic mathematician, and a massive nerd (if those last two didn't clue you in). In my free time, you can find me programming, playing music, playing with electronics, reading textbooks, Wikipedia, or lengthy online thinkpieces, listening to podcasts, cooking, running, swimming, cycling, or sailing.
+  </p>
 
   <section slot="1">
     <h1 class="resume__section-heading">Skills</h1>
