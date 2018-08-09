@@ -18,7 +18,7 @@
       </a>
       <div id="+++0"></div>
     </figure>
-    <p class="project__description">My first real math research experience was fascinating and I can't wait do to more. I developed an admittedly basic but defendably nontrivial theorem defining a certain way to decompose certain a certain type of group over the <a href="https://groupprops.subwiki.org/wiki/Internal_semidirect_product" target="_blank" class="project__description--link">semidirect product</a>. The theorem forms a (very) partial converse to the <a href="https://en.wikipedia.org/wiki/Splitting_lemma" target="_blank" class="project__description--link">splitting lemma</a>. The full paper can be found <a target="_blank" href="https://drive.google.com/file/d/1slWQsiMRJ_T8VWe0erpysymL3RrAHogU/view?usp=sharing" class="project__description--link">here</a>.</p>
+    <p class="project__description">I developed an admittedly basic but defendably nontrivial theorem defining a certain way to decompose certain a certain type of group over the <a href="https://groupprops.subwiki.org/wiki/Internal_semidirect_product" target="_blank" class="project__description--link">semidirect product</a>. The theorem forms a (very) partial converse to the <a href="https://en.wikipedia.org/wiki/Splitting_lemma" target="_blank" class="project__description--link">splitting lemma</a>. The full paper can be found <a target="_blank" href="https://drive.google.com/file/d/1slWQsiMRJ_T8VWe0erpysymL3RrAHogU/view?usp=sharing" class="project__description--link">here</a>.</p>
     <p class="project__description">The project was overseen and the original topic of investigating the converse of the splitting lemma was suggested by Dr. Peter Linnell, and I can't thank him enough for taking the time and expending the effort to help me start my mathematics career.</p>
   </section>
 
@@ -61,7 +61,6 @@
 <script>
 import InfoPage from "../components/info-page.vue";
 import MathRepository from "../models/math-repository.js";
-import katex from "katex";
 
 export default {
   components: {
@@ -72,10 +71,12 @@ export default {
       this.$router.push("contact");
     }
   },
-  mounted: function() {
+  mounted: async function() {
     let mathOptions = {
       colorIsTextColor: true
     };
+
+    const katex = await import("katex");
 
     MathRepository.portfolioDisplays.forEach((eqn, index) => {
       let element = document.getElementById("+++" + index);

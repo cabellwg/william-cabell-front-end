@@ -9,17 +9,13 @@
       </a>
     </div>
     <caption class="block-footer__bottom-text">
-      <i class="block-footer__bottom-text--interactable" @click="showThemes = !showThemes">Themes</i>
-      <span class="block-footer__bottom-text-divider">|</span>
       <i>v0.0.2</i>
     </caption>
-
-    <themes-modal :show-themes.sync="showThemes" />
   </footer>
 </template>
 
 <script>
-import ThemesModal from "./themes-modal.vue";
+import ThemesModal from "../components/themes-modal.vue";
 
 export default {
   components: {

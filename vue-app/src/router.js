@@ -1,9 +1,10 @@
 import Vue from "vue";
 import Router from "vue-router";
-import Home from "./views/home.vue";
-import Projects from "./views/projects.vue";
-import Resume from "./views/resume.vue";
-import Contact from "./views/contact.vue";
+const Home = () => import("./views/home.vue");
+const Projects = () => import("./views/projects.vue");
+const Resume = () => import("./views/resume.vue");
+const Contact = () => import("./views/contact.vue");
+const NotFound = () => import("./views/not-found.vue");
 
 Vue.use(Router);
 
@@ -29,6 +30,10 @@ export default new Router({
       path: "/contact",
       name: "contact",
       component: Contact
+    },
+    {
+      path: "*",
+      component: NotFound
     }
   ],
   scrollBehavior(to, from, savedPosition) {

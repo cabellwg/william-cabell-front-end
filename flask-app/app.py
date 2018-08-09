@@ -17,9 +17,13 @@ class TemplateFix(Flask):
 
 app = TemplateFix(__name__)
 
+
 # Routes
 
 @app.route("/")
+@app.route("/projects")
+@app.route("/resume")
+@app.route("/contact")
 def serve_app():
     return render_template("index.html")
 
@@ -27,6 +31,12 @@ def serve_app():
 def contacted():
     contact.add_contact(request.get_json())
     return "success"
+
+@app.errorhandler(404)
+def page_not_found(e):
+    return render_template("index.html")
+
+# Run
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)

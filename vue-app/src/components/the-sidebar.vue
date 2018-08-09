@@ -22,13 +22,6 @@
   height: 100vh
   width: 3rem
 
-  box-shadow: none
-  transition: box-shadow .1s
-
-  &:hover
-    box-shadow: -1.1rem 0 .75rem 1rem #000
-    transition: box-shadow .1s
-
   &__item
     display: flex
     flex-grow: 1

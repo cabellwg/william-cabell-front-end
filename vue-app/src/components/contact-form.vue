@@ -79,6 +79,8 @@
 </template>
 
 <script>
+const fetch = () => import("whatwg-fetch");
+
 export default {
   data: function() {
     return {
