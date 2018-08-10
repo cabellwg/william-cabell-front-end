@@ -9,7 +9,7 @@
       </a>
     </div>
     <caption class="block-footer__bottom-text">
-      <i>v0.0.2</i>
+      <i>v1.0.0</i>
     </caption>
   </footer>
 </template>

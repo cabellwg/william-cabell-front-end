@@ -2,8 +2,6 @@
 .auth_keys.json
 node_modules
 /dist
-templates
-static
 
 # local env files
 .env.local
