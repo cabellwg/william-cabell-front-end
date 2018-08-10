@@ -3,7 +3,7 @@
 
   <h2 slot="intro-heading">Projects</h2>
   <p slot="intro-text">
-    These are some of the projects I've worked on. Some are pieces of professional work I've done and some are personal projects of mine. If you have questions about any of them, don't hesitate to <a class="intro__text--link" @click="goToContact">contact me</a>.
+    I've done some cool stuff over the past few years. Some of it is professional work and some of it is for my own entertainment. If you have questions about anything here, don't hesitate to <a class="intro__text--link" @click="goToContact">contact me</a>.
   </p>
 
   <section slot="1" class="project">
@@ -37,7 +37,7 @@
     <figure>
 
     </figure>
-    <p class="project__description">I made this website of my own accord over summer 2018. It uses Vue.js, Flask, and Docker. It is ridiculously overengineered for its scale. The source code is available on <a target="_blank" href="https://gitlab.com/cabellwg/williamcabell" class="project__description--link">my GitLab</a>.</p>
+    <p class="project__description">I made this website of my own accord over summer 2018. It uses Vue.js for the front-end and Flask for the back-end, and is hosted on a DigitalOcean droplet. It is ridiculously overengineered for its scale. The source code is available on <a target="_blank" href="https://gitlab.com/cabellwg/williamcabell" class="project__description--link">my GitLab</a>.</p>
   </section>
 
   <section slot="4" class="project">

@@ -55,7 +55,7 @@ export default {
 
   > section
     margin-left: 3rem
-    padding: 15vh 5vh
+    padding: 7.5vh 5vh
 
     hr
       width: 20vw

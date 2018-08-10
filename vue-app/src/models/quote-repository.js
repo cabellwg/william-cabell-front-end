@@ -12,8 +12,7 @@ export default class QuoteRepository {
       link: "https://xkcd.com/1345/"
     },
     {
-      text:
-        "That would have been plenty humiliating without the goodnight kiss.",
+      text: "Oh, no reason. I was just curious.",
       source: "Calvin, Calvin & Hobbes"
     },
     {

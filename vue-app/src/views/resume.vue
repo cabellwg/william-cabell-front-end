@@ -9,10 +9,10 @@
     <h1 class="resume__section-heading">Skills</h1>
     <hr />
 
-    <resume-list v-bind="skills.mathematics" />
-    <resume-list v-bind="skills.development" />
-    <resume-list v-bind="skills.communication" />
-    <resume-list v-bind="skills.engineering" />
+    <resume-list class="resume__list" v-bind="skills.mathematics" />
+    <resume-list class="resume__list" v-bind="skills.development" />
+    <resume-list class="resume__list" v-bind="skills.communication" />
+    <resume-list class="resume__list" v-bind="skills.engineering" />
 
   </section>
 
@@ -20,16 +20,16 @@
     <h1 class="resume__section-heading">Experience</h1>
     <hr />
 
-    <resume-list v-bind="experience.industry" />
-    <resume-list v-bind="experience.freelance" />
+    <resume-list class="resume__list" v-bind="experience.industry" />
+    <resume-list class="resume__list" v-bind="experience.freelance" />
   </section>
 
   <section slot="3">
     <h1 class="resume__section-heading">Education</h1>
     <hr />
 
-    <resume-list v-bind="education.undergraduate" />
-    <resume-list v-bind="education.highSchool" />
+    <resume-list class="resume__list" v-bind="education.undergraduate" />
+    <resume-list class="resume__list" v-bind="education.highSchool" />
   </section>
 
   </info-page>
@@ -68,4 +68,7 @@ export default {
   &__text
     font-weight: 300
     max-width: 768px
+
+  &__list:last-child
+    margin-bottom: 0
 </style>
