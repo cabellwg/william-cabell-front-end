@@ -1,3 +1,6 @@
+# !/usr/bin/python
+# -*- coding: utf-8 -*-
+
 from flask import Flask, jsonify, request, render_template
 from pprint import pprint
 from main.services import contact
