@@ -4,6 +4,7 @@
 import datetime
 import smtplib
 import json
+import os
 
 def add_contact(contact):
     name = contact["name"]
@@ -21,13 +22,13 @@ def add_contact(contact):
     text += "Message: "      + msg   + "\n+ "
     text += "\n+\n+===========================\n"
 
-
     # Write to log
     with open("logs/contact.txt", "r") as original: data = original.read()
     with open("logs/contact.txt", "w") as modified: modified.write(text + data)
 
+
     # Get Gmail login
-    with open(".auth_keys.json") as auth:
+    with open("main/services/.auth_keys.json") as auth:
         auth_dict = json.load(auth)
 
         # Notify me
@@ -52,7 +53,7 @@ def send_email(from_addr, to_addr_list, cc_addr_list,
 
     server = smtplib.SMTP(smtpserver)
     server.starttls()
-    server.login(login,password)
-    problems = server.sendmail(from_addr, to_addr_list, message)
+    server.login(login, password)
+    problems = server.sendmail(from_addr, to_addr_list, message.encode())
     server.quit()
     return problems

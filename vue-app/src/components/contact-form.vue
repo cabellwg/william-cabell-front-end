@@ -104,7 +104,7 @@ export default {
     sendMessage: function() {
       this.sendButtonPressed();
 
-      let contactUrl = "https://williamcabell.me/api/contact";
+      let contactUrl = "http://localhost:5000/api/contact";
 
       let request = new Request(contactUrl, {
         method: "POST",
