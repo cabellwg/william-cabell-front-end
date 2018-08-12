@@ -79,8 +79,6 @@
 </template>
 
 <script>
-const fetch = () => import("whatwg-fetch");
-
 export default {
   data: function() {
     return {
@@ -106,7 +104,7 @@ export default {
     sendMessage: function() {
       this.sendButtonPressed();
 
-      let contactUrl = "api/contact";
+      let contactUrl = "https://williamcabell.me/api/contact";
 
       let request = new Request(contactUrl, {
         method: "POST",

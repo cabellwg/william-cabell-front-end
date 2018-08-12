@@ -10,8 +10,7 @@
   "dependencies": {
     "katex": "^0.10.0-beta",
     "vue": "^2.5.16",
-    "vue-router": "^3.0.1",
-    "whatwg-fetch": "^2.0.4"
+    "vue-router": "^3.0.1"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.0.0-rc.4",

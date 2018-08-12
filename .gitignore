@@ -1,5 +1,6 @@
 .DS_Store
 .auth_keys.json
+contact.txt
 node_modules
 /dist
 statics
