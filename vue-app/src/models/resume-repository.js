@@ -42,7 +42,7 @@ export default class ResumeRepository {
           id: 1,
           name: "ASP.NET Core MVC",
           description:
-            "Experience using ASP.NET Core MVC and its RESTful Web API to build powerful, computation-heavy, data-driven web applications."
+            "Experience using ASP.NET Core MVC and its RESTful Web API to build powerful, computation-heavy, concurrent web applications."
         },
         {
           id: 2,
