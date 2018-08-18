@@ -79,6 +79,8 @@
 </template>
 
 <script>
+const axios = () => import("axios");
+
 export default {
   data: function() {
     return {
@@ -104,19 +106,18 @@ export default {
     sendMessage: function() {
       this.sendButtonPressed();
 
-      let contactUrl = "https://williamcabell.me/api/contact";
-
-      let request = new Request(contactUrl, {
-        method: "POST",
-        headers: new Headers({
+      let request = {
+        url: "https://williamcabell.me/api/contact",
+        method: "post",
+        headers: {
           // eslint-disable-next-line
           "Accept": "application/json",
           "Content-Type": "application/json"
-        }),
-        body: JSON.stringify(this.formData)
-      });
+        },
+        data: this.formData
+      };
 
-      fetch(request).then(() => {
+      axios(request).then(() => {
         this.finished();
       });
     },
