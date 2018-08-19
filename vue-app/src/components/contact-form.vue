@@ -79,7 +79,7 @@
 </template>
 
 <script>
-const axios = () => import("axios");
+import axios from "axios";
 
 export default {
   data: function() {
@@ -107,13 +107,14 @@ export default {
       this.sendButtonPressed();
 
       let request = {
-        url: "https://williamcabell.me/api/contact",
+        url: "http://127.0.0.1:5000/api/contact",
         method: "post",
         headers: {
           // eslint-disable-next-line
           "Accept": "application/json",
           "Content-Type": "application/json"
         },
+        // withCredentials: true,
         data: this.formData
       };
 

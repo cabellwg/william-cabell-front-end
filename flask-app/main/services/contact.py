@@ -18,33 +18,34 @@ def add_contact(contact):
     text += "Name: "         + name  + "\n+ "
     text += "Organization: " + org   + "\n+ "
     text += "Email: "        + email + "\n+ "
-    text += "––––––––––––––––––––––––––\n+ "
+    text += "---------------------------\n+ "
     text += "Message: "      + msg   + "\n+ "
     text += "\n+\n+===========================\n"
 
     # Write to log
-    with open("logs/contact.txt", "r") as original: data = original.read()
-    with open("logs/contact.txt", "w") as modified: modified.write(text + data)
+    with open("/var/www/flask-app/FlaskApp/logs/contact.txt", "r") as original:
+        data = original.read()
+    with open("/var/www/flask-app/FlaskApp/logs/contact.txt", "w") as modified:
+        modified.write(text + data)
 
-
-    # Get Gmail login
-    with open("main/services/.auth_keys.json") as auth:
-        auth_dict = json.load(auth)
-
-        # Notify me
-        send_email(from_addr="william16180@gmail.com",
-                   to_addr_list=["william16180@gmail.com"],
-                   cc_addr_list=[],
-                   subject="Someone actually used the form!",
-                   message=text,
-                   login=auth_dict["gmail"]["username"],
-                   password=auth_dict["gmail"]["password"])
+    # # Get Gmail login
+    # with open("main/services/.auth_keys.json") as auth:
+    #     auth_dict = json.load(auth)
+    #
+    #     # Notify me
+    #     send_email(from_addr="william16180@gmail.com",
+    #                to_addr_list=["william16180@gmail.com"],
+    #                cc_addr_list=[],
+    #                subject="Someone actually used the form!",
+    #                message=text,
+    #                login=auth_dict["gmail"]["username"],
+    #                password=auth_dict["gmail"]["password"])
 
 # Shamelessly stolen from http://rosettacode.org/wiki/Send_email#Python
 def send_email(from_addr, to_addr_list, cc_addr_list,
                subject, message,
                login, password,
-               smtpserver='smtp.gmail.com:587'):
+               smtpserver='smtp.gmail.com'):
     header  = 'From: %s\n' % from_addr
     header += 'To: %s\n' % ','.join(to_addr_list)
     header += 'Cc: %s\n' % ','.join(cc_addr_list)
