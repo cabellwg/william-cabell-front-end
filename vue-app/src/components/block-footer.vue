@@ -4,8 +4,8 @@
       <a href="https://www.linkedin.com/in/william-cabell-16180/" target="_blank">
         <img class="block-footer__logo --lighten" src="../assets/linkedin-logo.png" alt="Go to my LinkedIn" />
       </a>
-      <a href="https://gitlab.com/cabellwg" target="_blank">
-        <img class="block-footer__logo" src="../assets/gitlab-logo.svg" alt="Go to my Gitlab" />
+      <a href="https://github.com/cabellwg" target="_blank">
+        <img class="block-footer__logo" src="../assets/github-logo.svg" alt="Go to my Github" />
       </a>
     </div>
     <caption class="block-footer__bottom-text">

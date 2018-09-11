@@ -28,13 +28,13 @@
     <figure class="project__img-container">
       <a
         target="_blank"
-        href="https://gitlab.com/cabellwg/monte-carlo"
+        href="https://github.com/cabellwg/monte-carlo"
         class="project__img-container--cover">
         Click to view source
       </a>
       <img class="project__img" src="../assets/monte-carlo-screenshot.png" alt="Graph of portfolio simulation">
     </figure>
-    <p class="project__description">At the <a target="_blank" href="http://www.moneyguidepro.com/ifa/" class="project__description--link">PIEtech, Inc.</a> summer internship, I designed and built Monte Carlo simulations of stock prices and bond yields. To model stock prices, I settled on a discretized <a href="https://en.wikipedia.org/wiki/Geometric_Brownian_motion" target="_blank" class="project__description--link">geometric Brownian motion</a> model, which is the stochastic process used to sample prices for the <a href="https://en.wikipedia.org/wiki/Black%E2%80%93Scholes_model" target="_blank" class="project__description--link">Black-Scholes model</a>. For bond yields, I used a random walk. Read more about the project and the mathematics behind it on <a target="_blank" href="https://gitlab.com/cabellwg/monte-carlo" class="project__description--link">my GitLab</a>.</p>
+    <p class="project__description">At the <a target="_blank" href="http://www.moneyguidepro.com/ifa/" class="project__description--link">PIEtech, Inc.</a> summer internship, I designed and built Monte Carlo simulations of stock prices and bond yields. To model stock prices, I settled on a discretized <a href="https://en.wikipedia.org/wiki/Geometric_Brownian_motion" target="_blank" class="project__description--link">geometric Brownian motion</a> model, which is the stochastic process used to sample prices for the <a href="https://en.wikipedia.org/wiki/Black%E2%80%93Scholes_model" target="_blank" class="project__description--link">Black-Scholes model</a>. For bond yields, I used a random walk. Read more about the project and the mathematics behind it on <a target="_blank" href="https://github.com/cabellwg/monte-carlo" class="project__description--link">my GitHub</a>.</p>
   </section>
 
   <section slot="3" class="project">
@@ -43,7 +43,7 @@
     <figure>
 
     </figure>
-    <p class="project__description">I made this website of my own accord over summer 2018. It uses Vue.js for the front-end and Flask for the back-end, and is hosted on a DigitalOcean droplet. It is ridiculously overengineered for its scale. The source code is available on <a target="_blank" href="https://gitlab.com/cabellwg/williamcabell" class="project__description--link">my GitLab</a>.</p>
+    <p class="project__description">I made this website of my own accord over summer 2018. It uses Vue.js for the front-end and Flask for the back-end, and is hosted on a DigitalOcean droplet. It is ridiculously overengineered for its scale. The source code is available on <a target="_blank" href="https://github.com/cabellwg/williamcabell" class="project__description--link">my GitHub</a>.</p>
   </section>
 
   <section slot="4" class="project">
