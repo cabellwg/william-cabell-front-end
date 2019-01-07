@@ -6,6 +6,7 @@ node_modules
 static
 templates
 flask_env
+p3_6env
 p3_7env
 
 # local env files
