@@ -3,7 +3,7 @@ init:
 	virtualenv -p python3.7 p3_7env --no-site-packages; \
 	. ./p3_7env/bin/activate; \
 	pip install -r requirements.txt
-	cd vue_app; yarn build --modern
+	cd vue_app; yarn && yarn build --modern
 
 test:
 	. ./p3_7env/bin/activate; \
