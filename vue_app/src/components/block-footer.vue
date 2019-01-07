@@ -5,7 +5,7 @@
         <img class="block-footer__logo --lighten" src="../assets/linkedin-logo.png" alt="Go to my LinkedIn" />
       </a>
       <a href="https://github.com/cabellwg" target="_blank">
-        <img class="block-footer__logo" src="../assets/github-logo.svg" alt="Go to my Github" />
+        <img class="block-footer__logo" src="../assets/github-logo.png" alt="Go to my Github" />
       </a>
     </div>
     <caption class="block-footer__bottom-text">

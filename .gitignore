@@ -5,6 +5,8 @@ node_modules
 /dist
 static
 templates
+flask_env
+p3_7env
 
 # local env files
 .env.local

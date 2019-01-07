@@ -1,4 +1,4 @@
 module.exports = {
-  outputDir: "../flask-app/templates",
+  outputDir: "../flask_app/templates",
   assetsDir: "../static/client-app"
 };
