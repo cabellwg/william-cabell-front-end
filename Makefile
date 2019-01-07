@@ -4,6 +4,8 @@ init:
 	. ./p3_6env/bin/activate; \
 	pip install -r requirements.txt
 	cd vue_app; yarn && yarn build --modern
+	-mkdir flask_app/logs
+	-touch flask_app/logs/contact.txt
 
 test:
 	. ./p3_6env/bin/activate; \
