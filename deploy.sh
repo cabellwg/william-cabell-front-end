@@ -1,10 +1,12 @@
 # Clear out the old build
+touch log
+echo "0\n" >> log
 cd flask_app
 sudo rm -rf static templates
 
 # Build the newest version
 cd ..
-touch log
+
 sudo git pull
 echo "1\n" >> log
 sudo make init
