@@ -2,8 +2,11 @@ import datetime
 import smtplib
 import json
 import os
+import flask_app
 
 def add_contact(contact):
+    path = os.path.dirname(flask_app.__file__) + "/"
+
     name = contact["name"] or ""
     org = contact["organization"] or ""
     email = contact["email"] or ""
@@ -20,7 +23,7 @@ def add_contact(contact):
     text += "\n+\n+===========================\n"
 
     # Write to log
-    with open("logs/contact.txt", "r") as original:
+    with open(path + "logs/contact.txt", "r") as original:
         data = original.read()
-    with open("logs/contact.txt", "w") as modified:
+    with open(path + "logs/contact.txt", "w") as modified:
         modified.write(text + data)
