@@ -4,6 +4,7 @@ import json
 import os
 import flask_app
 
+
 def add_contact(contact):
     path = os.path.dirname(flask_app.__file__) + "/"
 
