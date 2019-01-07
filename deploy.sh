@@ -1,3 +1,5 @@
+#!/bin/sh
+
 # Clear out the old build
 touch log
 echo "0\n" >> log
