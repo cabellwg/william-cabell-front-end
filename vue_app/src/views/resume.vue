@@ -1,35 +1,99 @@
 <template>
-  <info-page :number-of-fields="3">
+  <info-page :number-of-fields="3" class="resume">
 
   <h2 slot="intro-heading">Résumé</h2>
-  <p slot="intro-text">I'm a curious, goal-oriented, hard-working mathematics major at Virginia Tech interested in mathematics research and software development. I'm a self-taught full-stack web developer, an enthusiastic mathematician, and a massive nerd (if those last two didn't clue you in). In my free time, you can find me programming, playing music, playing with electronics, reading textbooks, Wikipedia, or lengthy online thinkpieces, listening to podcasts, cooking, running, swimming, cycling, or sailing.
-  </p>
 
   <section slot="1">
-    <h1 class="resume__section-heading">Skills</h1>
-    <hr />
+    <div class="resume__card resume__card--heading">
+      <h1 class="resume__section-heading">Education</h1>
+      <hr />
+    </div>
 
-    <resume-list class="resume__list" v-bind="skills.mathematics" />
-    <resume-list class="resume__list" v-bind="skills.development" />
-    <resume-list class="resume__list" v-bind="skills.communication" />
-    <resume-list class="resume__list" v-bind="skills.engineering" />
-
+    <div class="resume__card">
+      <h6 class="resume__subsection-heading">Virginia Tech</h6>
+      <caption class="resume__caption">2017-2019 (Planned)</caption>
+      <p class="resume__text">Currently working towards a B.S. in mathematics with a minor in computer science. Planned graduation three semesters early.</p>
+    </div>
+    <div class="resume__card">
+      <h6 class="resume__subsection-heading">Maggie L. Walker Governor's School for Government and International Studies</h6>
+      <caption class="resume__caption">2013-2017</caption>
+      <p class="resume__text">Completed advanced curriculum including classes in multivariate calculus, mathematical proofs, linear algebra, business information technology, and calculus-based physics.</p>
+    </div>
   </section>
-
   <section slot="2">
-    <h1 class="resume__section-heading">Experience</h1>
-    <hr />
+    <div class="resume__card resume__card--heading">
+      <h1 class="resume__section-heading">Skills</h1>
+      <hr />
+    </div>
 
-    <resume-list class="resume__list" v-bind="experience.industry" />
-    <resume-list class="resume__list" v-bind="experience.freelance" />
+    <div class="resume__card">
+      <h6 class="resume__subsection-heading">Software Development</h6>
+      <dl class="resume__dl">
+        <dt>Full-stack web development</dt>
+        <dd>
+          Vue.js, Sass, Aurelia, JavaScript, TypeScript, ASP.NET Core MVC, Flask, WSGI, Apache 2.0, Ubuntu Server, CentOS Server, DNS, SSL, Webpack
+        </dd>
+        <dt>General</dt>
+        <dd>
+          Python, C#, C, Java, Bash, Vim
+        </dd>
+        <dt>Other</dt>
+        <dd>
+          Unity3D game development, Swift/Objective-C iOS development
+        </dd>
+      </dl>
+    </div>
+
+    <div class="resume__card">
+      <h6 class="resume__subsection-heading">Mathematics</h6>
+      <dl class="resume__dl">
+        <dt>Abstract algebra</dt>
+        <dd>
+          Group theory, Lie groups, commutative ring theory, abstract linear algebra, category theory
+        </dd>
+        <dt>Linear algebra</dt>
+        <dd>
+          Three proofs-based linear algebra classes, including linear algebra in the complex numbers and in commutative rings, and modules.
+        </dd>
+        <dt>Applied mathematics</dt>
+        <dd>
+          Stochastic calculus and financial modeling, statistics, game theory, cryptography
+        </dd>
+      </dl>
+    </div>
+
+    <div class="resume__card">
+      <h6 class="resume__subsection-heading">Communication</h6>
+      <dl class="resume__dl">
+        <dt>Languages</dt>
+        <dd>
+          Intermediate-level French, novice-level Chinese
+        </dd>
+        <dt>Verbal communication</dt>
+        <dd>
+          Clear and precise writer, confident public speaker.
+        </dd>
+      </dl>
+    </div>
+
   </section>
 
   <section slot="3">
-    <h1 class="resume__section-heading">Education</h1>
-    <hr />
+    <div class="resume__card resume__card--heading">
+      <h1 class="resume__section-heading">Extracurriculars</h1>
+      <hr />
+    </div>
 
-    <resume-list class="resume__list" v-bind="education.undergraduate" />
-    <resume-list class="resume__list" v-bind="education.highSchool" />
+    <div class="resume__card">
+      <h6 class="resume__subsection-heading">SailBOT</h6>
+      <caption class="resume__caption">2017-2019</caption>
+      <p class="resume__text">ECE subteam lead for design team building autonomous sailboat, 2018-2019. ECE team member, 2017-2018. Designed and built large codebase with Python, C, and Cython. Oversaw complete website rebuild.</p>
+    </div>
+    <div class="resume__card">
+      <h6 class="resume__subsection-heading">Math club</h6>
+      <caption class="resume__caption">2017-2019</caption>
+      <p class="resume__text">President of official MAA math club at Virginia Tech, 2018-2019. Freshman representative, spring 2018. Coordinated talks by faculty members, gave presentations on mathematical topics including social choice theory.</p>
+    </div>
   </section>
 
   </info-page>
@@ -37,25 +101,16 @@
 
 <script>
 import InfoPage from "../components/info-page.vue";
-import ResumeList from "../components/resume-list.vue";
-import ResumeRepository from "../models/resume-repository.js";
-
 export default {
   components: {
-    InfoPage,
-    ResumeList
-  },
-  data: function() {
-    return {
-      skills: ResumeRepository.skills,
-      experience: ResumeRepository.experience,
-      education: ResumeRepository.education
-    };
+    InfoPage
   }
 };
 </script>
 
 <style lang="sass">
+@import "../styles/variables"
+
 .resume
   &__section-heading
     font-size: 2.5rem
@@ -65,10 +120,61 @@ export default {
     font-size: 1.5rem
     font-weight: 500
 
+  &__subsection-heading
+    font-size: 1rem
+    font-style: italic
+    font-weight: 600
+    margin-bottom: 0
+
+  &__caption
+    display: inline
+
+    text-align: left
+    font-weight: 300
+    font-style: italic
+    font-size: 0.9rem
+    color: $mid-grey
+
   &__text
     font-weight: 300
     max-width: 768px
 
+  &__dl
+    font-weight: 300
+
+    dd
+      margin-left: 20px
+
   &__list:last-child
     margin-bottom: 0
+
+  &__card
+    max-width: 300px
+    padding: 0 25px
+    flex-shrink: 1
+
+    &--heading
+      flex-shrink: 2
+
+  section
+    display: flex
+    flex-direction: row
+    align-items: flex-start
+    justify-content: flex-start
+
+@include media("<=1100px")
+  .resume
+    section
+      flex-direction: column
+      margin-left: -1rem
+
+      &:first-of-type
+        margin-left: 3rem
+
+    &__card
+      max-width: 100%
+      
+@include media("<=500px")
+  .resume__section-heading
+    font-size: 2rem
 </style>
