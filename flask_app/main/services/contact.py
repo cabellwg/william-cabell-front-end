@@ -8,10 +8,10 @@ import flask_app
 def add_contact(contact):
     path = os.path.dirname(flask_app.__file__) + "/"
 
-    name = contact["name"] or ""
-    org = contact["organization"] or ""
-    email = contact["email"] or ""
-    msg = contact["message"] or ""
+    name = contact.get("name") or ""
+    org = contact.get("organization") or ""
+    email = contact.get("email") or ""
+    msg = contact.get("message") or ""
 
     # Construct message
     text  = "+===========================\n+\n+ "

@@ -10,10 +10,6 @@ from flask_app.main.services import contact
 from flask_app.main.services import continuous_deployment
 
 
-# Setup
-app = Flask(__name__)
-CORS(app, resources={r'/api/*': {"origins": r"williamcabell.me/*"}})
-
 # No collisions with Vue.js bindings
 class TemplateFix(Flask):
     jinja_options = Flask.jinja_options.copy()
@@ -22,33 +18,46 @@ class TemplateFix(Flask):
         variable_end_string="%%"
     ))
 
-app = TemplateFix(__name__)
+
+def create_app(test_config=None):
+    # Setup
+    app = Flask(__name__)
+
+    if test_config is None:
+        app.config.from_pyfile('config.py', silent=True)
+    else:
+        app.config.from_mapping(test_config)
+
+    CORS(app, resources={r"/api/*": {"origins": r"williamcabell.me/*"}})
+    app = TemplateFix(__name__)
+
+    # Routes
+    @app.route("/")
+    @app.route("/projects")
+    @app.route("/resume")
+    @app.route("/contact")
+    def serve_app():
+        return render_template("index.html")
 
 
-# Routes
-@app.route("/")
-@app.route("/projects")
-@app.route("/resume")
-@app.route("/contact")
-def serve_app():
-    return render_template("index.html")
+    @app.route("/api/contact", methods=["POST"])
+    @cross_origin(allow_headers=['Content-Type'])
+    def contacted():
+        contact.add_contact(request.get_json())
+        return jsonify({"success" : True})
 
 
-@app.route("/api/contact", methods=["POST"])
-@cross_origin(allow_headers=['Content-Type'])
-def contacted():
-    contact.add_contact(request.get_json())
-    return jsonify({"success" : True})
+    @app.route("/api/cd", methods=["POST"])
+    def continuously_deploy():
+        continuous_deployment.reload()
 
 
-@app.route("/api/cd", methods=["POST"])
-def continuously_deploy():
-    continuous_deployment.reload()
+    @app.errorhandler(404)
+    def page_not_found(e):
+        return render_template("index.html"), 404
 
 
-@app.errorhandler(404)
-def page_not_found(e):
-    return render_template("index.html")
+    return app
 
 
 # Run
