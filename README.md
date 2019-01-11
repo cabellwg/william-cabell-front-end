@@ -1,5 +1,6 @@
 # William Cabell
-
+[![Build status](https://travis-ci.com/cabellwg/williamcabell.svg?branch=master)](https://travis-ci.com/cabellwg/williamcabell)
+[![License information](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://github.com/cabellwg/williamcabell/blob/master/LICENSE)
 > This is my personal website. For now, it has my full résumé and links to some of my projects, as well as a contact page to get in touch with me. I will probably add several interactive demos in the future, which is part of the reason it's so overengineered for what it currently is.
 
 ---
