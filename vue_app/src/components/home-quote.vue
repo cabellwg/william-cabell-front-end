@@ -3,7 +3,7 @@
     <blockquote class="home-quote__text">
       “{{ quote.text }}”
     </blockquote>
-    <a :href="quote.link" target="_blank" class="home-quote__source">{{ quote.source || "Anonymous" }}</a>
+    <!-- <a :href="quote.link" target="_blank" class="home-quote__source">{{ quote.source || "Anonymous" }}</a> -->
   </figure>
 
 </template>
