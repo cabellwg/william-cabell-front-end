@@ -37,7 +37,7 @@ export default {
     margin-left: 3rem
 
   &__title
-    margin-top: 0
+    margin-top: 3%
     padding-top: 5vh
 
     font-size: 1.7rem

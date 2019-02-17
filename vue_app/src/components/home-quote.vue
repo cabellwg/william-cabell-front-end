@@ -38,8 +38,9 @@ export default {
     margin-bottom: 1vh
 
     line-height: 1.2
-    text-align: left
+    text-align: center
     font-weight: 300
+    font-size: 0.9rem
 
   &__source
     width: 12rem
