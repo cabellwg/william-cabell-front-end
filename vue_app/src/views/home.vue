@@ -1,6 +1,6 @@
 <template>
   <main class="home">
-    <h2 class="home__title">William Cabell</h2>
+    <!-- <h2 class="home__title">William Cabell</h2> -->
 
     <home-quote />
 

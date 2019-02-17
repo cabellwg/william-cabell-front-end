@@ -57,7 +57,7 @@ export default {
 
     overflow: hidden
 
-    margin: 0 auto
+    margin: 2rem auto 0
 
   &__logos
     display: flex
