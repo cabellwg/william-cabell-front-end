@@ -8,13 +8,18 @@
         <img class="block-footer__logo" src="../assets/github-logo.png" alt="Go to my Github" />
       </a>
     </div>
-    <caption class="block-footer__bottom-text">
-      <i>v1.1.2</i>
-    </caption>
+    <a
+      href="https://github.com/cabellwg/williamcabell/releases"
+      target="_blank"
+      class="block-footer__bottom-text block-footer__bottom-text--interactable"
+    >
+      <i class="block-footer__version">{{ version }}</i>
+    </a>
   </footer>
 </template>
 
 <script>
+import axios from "axios";
 import ThemesModal from "../components/themes-modal.vue";
 
 export default {
@@ -23,8 +28,18 @@ export default {
   },
   data: function() {
     return {
-      showThemes: false
+      showThemes: false,
+      version: ""
     };
+  },
+  mounted: function() {
+    axios
+      .get(
+        "https://api.github.com/repos/cabellwg/williamcabell/releases/latest"
+      )
+      .then(response => {
+        this.version = response.data.tag_name;
+      });
   }
 };
 </script>
