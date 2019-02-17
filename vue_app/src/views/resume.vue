@@ -31,13 +31,17 @@
       <dl class="resume__dl">
         <dt>Full-stack web development</dt>
         <dd>
-          Vue.js, Sass, Aurelia, JavaScript, TypeScript, ASP.NET Core MVC, Flask, WSGI, Apache 2.0, Ubuntu Server, CentOS Server, DNS, SSL, Webpack
+          Vue.js, Sass, Aurelia, JavaScript, TypeScript, ASP.NET Core MVC, Flask, React
         </dd>
         <dt>General</dt>
         <dd>
           Python, C#, C, Java, Bash, Vim
         </dd>
-        <dt>Other</dt>
+        <dt>DevOps</dt>
+        <dd>
+          Docker, Travis CI, Coveralls, Webpack, *nix server
+        </dd>
+        <dt>Des amuses-bouches</dt>
         <dd>
           Unity3D game development, Swift/Objective-C iOS development
         </dd>
@@ -101,6 +105,7 @@
 
 <script>
 import InfoPage from "../components/info-page.vue";
+
 export default {
   components: {
     InfoPage
@@ -173,7 +178,7 @@ export default {
 
     &__card
       max-width: 100%
-      
+
 @include media("<=500px")
   .resume__section-heading
     font-size: 2rem
