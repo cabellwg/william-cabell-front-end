@@ -1,7 +1,7 @@
 <template>
   <div class="not-found">
     <h1 class="not-found__heading">Ceci est une page.</h1>
-    <p class="not-found__text">Desolé, il est impossible de trouver cette page. Mais vous l'avez lue correctement. L'imposture de l'Internet est que n'importe quoi est une page, donc il ne faut pas que vous vous perdiez dans le surréalisme. Mais j'espère que vous pouvez comprendre le français.</p>
+    <p class="not-found__text">Desolé, il est impossible de trouver cette page. Mais vous êtes bien en train de lire une page, non? Le fait que n'importe quoi soit une page est la trahison des internets. Soyez prudent, ne vous perdez pas dans le surréalisme. J'espère que vous pouvez comprendre le français.</p>
   </div>
 </template>
 
