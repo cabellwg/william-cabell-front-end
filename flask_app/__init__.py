@@ -50,6 +50,7 @@ def create_app(test_config=None):
     @app.route("/api/cd", methods=["POST"])
     def continuously_deploy():
         continuous_deployment.reload()
+        return b"Rebuilding application", 202
 
 
     @app.errorhandler(404)

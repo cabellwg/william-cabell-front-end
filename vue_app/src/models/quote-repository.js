@@ -152,6 +152,11 @@ export default class QuoteRepository {
       text:
         "If one uses the tools of modern algebraic topology, singular homology theory in particular, the proof is quite straightfoward.",
       source: "James Munkres, Topology"
+    },
+    {
+      text:
+        "I don’t play accurately – any one can play accurately – but I play with wonderful expression.",
+      source: "Algernon, The Importance of Being Earnest"
     }
   ];
 
