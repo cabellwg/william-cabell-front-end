@@ -157,6 +157,10 @@ export default class QuoteRepository {
       text:
         "I don’t play accurately – any one can play accurately – but I play with wonderful expression.",
       source: "Algernon, The Importance of Being Earnest"
+    },
+    {
+      text: "What kind of person quotes themselves on their own website?",
+      source: "Kendra Song"
     }
   ];
 
