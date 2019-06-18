@@ -1,19 +1,3 @@
-FROM python:3.7-alpine
-
-RUN apk add --no-cache \
-        bash \
-        make \
-        linux-headers \
-        g++ \
-        pcre \
-        pcre-dev \
-        nodejs \
-        nodejs-npm \
-        yarn
-
-COPY . /app
-WORKDIR /app
-
-RUN make init
-
-ENTRYPOINT /app/p3_7env/bin/uwsgi --ini /app/uwsgi/williamcabell.ini
+FROM nginx:1.15-alpine
+COPY nginx.conf /etc/nginx/nginx.conf
+COPY dist /usr/share/nginx/html
