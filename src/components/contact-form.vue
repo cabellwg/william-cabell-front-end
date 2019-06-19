@@ -1,40 +1,36 @@
 <template>
   <form class="contact-form">
-      <div class="contact-form__field">
-        <label
-          for="name"
-          class="contact-form__label">
-          Name
-        </label>
-        <input
-          type="text"
-          name="name"
-          autocomplete="on name"
-          required
-          class="contact-form__input"
-          v-model="name" />
+    <div class="contact-form__field">
+      <label for="name" class="contact-form__label">
+        Name
+      </label>
+      <input
+        type="text"
+        name="name"
+        autocomplete="on name"
+        required
+        class="contact-form__input"
+        v-model="name"
+      />
     </div>
 
     <div class="contact-form__field">
-      <label
-        for="organization"
-        class="contact-form__label">
+      <label for="organization" class="contact-form__label">
         Organization
-          <span class="contact-form__label--optional">
-            – Optional
-          </span>
+        <span class="contact-form__label--optional">
+          – Optional
+        </span>
       </label>
       <input
         type="text"
         name="organization"
         class="contact-form__input"
-        v-model="organization" />
+        v-model="organization"
+      />
     </div>
 
     <div class="contact-form__field">
-      <label
-        for="email"
-        class="contact-form__label">
+      <label for="email" class="contact-form__label">
         Email
       </label>
       <input
@@ -43,20 +39,20 @@
         required
         autocomplete="on email"
         class="contact-form__input"
-        v-model="email" />
+        v-model="email"
+      />
     </div>
 
     <div class="contact-form__field contact-form__field--tall">
-      <label
-        for="message"
-        class="contact-form__label">
+      <label for="message" class="contact-form__label">
         Message
       </label>
       <textarea
         name="message"
         required
         class="contact-form__input contact-form__textarea"
-        v-model="message">
+        v-model="message"
+      >
       </textarea>
     </div>
 
@@ -65,7 +61,8 @@
         id="send-button"
         type="button"
         @click="sendMessage"
-        class="contact-form__submit-button">
+        class="contact-form__submit-button"
+      >
         Send
       </button>
       <transition name="fade" mode="out-in">
@@ -114,7 +111,7 @@ export default {
           "Accept": "application/json",
           "Content-Type": "application/json"
         },
-        // withCredentials: true,
+        withCredentials: true,
         data: this.formData
       };
 
@@ -280,5 +277,4 @@ export default {
 @keyframes spin
   100%
     transform: rotate(360deg)
-
 </style>
