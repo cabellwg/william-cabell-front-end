@@ -1,5 +1,5 @@
 # `william-cabell-front-end`
-[![License information](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://github.com/cabellwg/williamcabell/blob/master/LICENSE)
+[![License information](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://github.com/cabellwg/williamcabell/blob/master/LICENSE) [![Vue.js](https://img.shields.io/badge/Vue.js-2.5-42b983.svg)](https://vuejs.org) [![Nginx](https://img.shields.io/badge/Nginx-1.17-009639.svg)]()
 
 My personal website. It has a randomly generated quote on the front of it because I'm cool. Or at least that's what my mom says. And she also says that I don't have to care about what the other kids think so I don't even want to hear it.
 
