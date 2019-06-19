@@ -104,7 +104,7 @@ export default {
       this.sendButtonPressed();
 
       let request = {
-        url: "https://williamcabell.me/api/contact",
+        url: "https://api.williamcabell.me/contact",
         method: "post",
         headers: {
           // eslint-disable-next-line
