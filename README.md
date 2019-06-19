@@ -1,5 +1,6 @@
-# `william-cabell-front-end
+# `william-cabell-front-end`
 [![License information](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://github.com/cabellwg/williamcabell/blob/master/LICENSE)
+
 My personal website. It has a randomly generated quote on the front of it because I'm cool. Or at least that's what my mom says. And she also says that I don't have to care about what the other kids think so I don't even want to hear it.
 
 And I did quote some code I wrote. Yes, I quoted myself. It's a free fucking country. I can do that and I don't have to justify it.
