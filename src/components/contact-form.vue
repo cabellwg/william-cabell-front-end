@@ -111,7 +111,7 @@ export default {
           "Accept": "application/json",
           "Content-Type": "application/json"
         },
-        withCredentials: true,
+        withCredentials: false,
         data: this.formData
       };
 
