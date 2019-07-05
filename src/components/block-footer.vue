@@ -1,11 +1,22 @@
 <template>
   <footer class="block-footer__footer">
     <div class="block-footer__logos">
-      <a href="https://www.linkedin.com/in/william-cabell-16180/" target="_blank">
-        <img class="block-footer__logo --lighten" src="../assets/linkedin-logo.png" alt="Go to my LinkedIn" />
+      <a
+        href="https://www.linkedin.com/in/william-cabell-16180/"
+        target="_blank"
+      >
+        <img
+          class="block-footer__logo --lighten"
+          src="../assets/linkedin-logo.png"
+          alt="Go to my LinkedIn"
+        />
       </a>
       <a href="https://github.com/cabellwg" target="_blank">
-        <img class="block-footer__logo" src="../assets/github-logo.png" alt="Go to my Github" />
+        <img
+          class="block-footer__logo"
+          src="../assets/github-logo.png"
+          alt="Go to my Github"
+        />
       </a>
     </div>
     <a
@@ -35,7 +46,7 @@ export default {
   mounted: function() {
     axios
       .get(
-        "https://api.github.com/repos/cabellwg/williamcabell/releases/latest"
+        "https://api.github.com/repos/cabellwg/william-cabell-front-end/releases/latest"
       )
       .then(response => {
         this.version = response.data.tag_name;
@@ -43,7 +54,6 @@ export default {
   }
 };
 </script>
-
 
 <style lang="sass">
 @import "../styles/variables"
@@ -93,5 +103,4 @@ export default {
       margin-right: 0.75rem
 .--lighten
   opacity: 0.875
-
 </style>

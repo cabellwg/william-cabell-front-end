@@ -25,30 +25,25 @@ export default class QuoteRepository {
       source: "Ender, Speaker for the Dead"
     },
     {
-      text: "I should feel scared. But I don't.",
+      text: "I should feel scared. But I don&rsquo;t.",
       source: "Randall Munroe",
       link: "https://xkcd.com/266/"
-    },
-    {
-      text:
-        "The purpose of life is finding the largest burden that you can bear and bearing it.",
-      source: "Jordan Peterson"
     },
     {
       text: "Happiness equals reality minus expectations.",
       source: "Tom Magliozzi, Car Talk"
     },
     {
-      text: "It depends on what the meaning of the word “is” is.",
+      text: "It depends on what the meaning of the word &lsquo;is&rsquo; is.",
       source: "President Bill Clinton"
     },
     {
-      text: "I hear there's rumors on the Internets.",
+      text: "I hear there&rsquo;s rumors on the Internets.",
       source: "President George W. Bush"
     },
     {
       text:
-        "Stop being reasonable. You can't do that here, this is the internet. Act accordingly!",
+        "Stop being reasonable. You can&rsquo;t do that here, this is the internet. Act accordingly!",
       source: "[REDACTED], tweeted by @SeargeDP",
       link: "https://twitter.com/SeargeDP/status/476619831232708608"
     },
@@ -65,12 +60,7 @@ export default class QuoteRepository {
       source: "Jean-Paul Sartre"
     },
     {
-      text:
-        "The happiness of your life depends upon the quality of your thoughts.",
-      source: "Marcus Aurelius"
-    },
-    {
-      text: "Wallace! Amazon.ca, what's the website for that?",
+      text: "Wallace! Amazon.ca, what&rsquo;s the website for that?",
       source: "Scott Pilgrim, Scott Pilgrim vs. the World"
     },
     {
@@ -82,11 +72,12 @@ export default class QuoteRepository {
       source: "Jules, Pulp Fiction"
     },
     {
-      text: "They're just there, like old creatures everyone's forgotten.",
+      text:
+        "They&rsquo;re just there, like old creatures everyone&rsquo;s forgotten.",
       source: "Herschel, Gemini"
     },
     {
-      text: "I'm going to stand here and be myself, no matter what.",
+      text: "I&rsquo;m going to stand here and be myself, no matter what.",
       source: "Herschel, Gemini"
     },
     {
@@ -94,12 +85,11 @@ export default class QuoteRepository {
       source: "Doris, Same Time, Next Year"
     },
     {
-      text:
-        "Never forget what you are, for surely the world will not. Make it your strength. Then it can never be your weakness. Armour yourself in it, and it will never be used to hurt you.",
-      source: "Tyrion Lannister, Game of Thrones"
+      text: "Only the ladder is real. The climb is all there is.",
+      source: "Lord Petyr Baelish, Game of Thrones"
     },
     {
-      text: "I've always loathed the necessity of sleep.",
+      text: "I&rsquo;ve always loathed the necessity of sleep.",
       source: "Frank Underwood, House of Cards"
     },
     {
@@ -110,17 +100,11 @@ export default class QuoteRepository {
     },
     {
       text:
-        "Odious ideas are not entitled to hide from criticism behind the human shield of their believers' feelings.",
-      source: "Richard Stallman",
-      link: "http://www.stallman.org/sayings.html"
-    },
-    {
-      text:
         "No one in the world ever gets what they want, and that is beautiful.",
-      source: "Don't Let's Start, They Might Be Giants"
+      source: "Don&rsquo;t Let&rsquo;s Start, They Might Be Giants"
     },
     {
-      text: 'alias cd="sudo rm -rf / --no-preserve-root"',
+      text: 'alias cd="rm -rf"',
       source: "William Cabell"
     },
     {
@@ -134,7 +118,7 @@ export default class QuoteRepository {
       source: "Oscar Wilde"
     },
     {
-      text: "Don't see it?  Tilt your head to the left 90 degrees.",
+      text: "Don&rsquo;t see it?  Tilt your head to the left 90 degrees.",
       source: "RFC1392",
       link: "https://tools.ietf.org/html/rfc1392"
     },
@@ -146,7 +130,7 @@ export default class QuoteRepository {
     {
       text:
         "Real mathematics must be justified as art if it can be justified at all.",
-      source: "G.H. Hardy, A Mathematician's Apology"
+      source: "G.H. Hardy, A Mathematician&rsquo;s Apology"
     },
     {
       text:

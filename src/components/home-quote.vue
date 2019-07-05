@@ -1,11 +1,10 @@
 <template>
   <figure class="home-quote">
     <blockquote class="home-quote__text">
-      “{{ quote.text }}”
+      &ldquo;<span v-html="quote.text"></span>&rdquo;
     </blockquote>
     <!-- <a :href="quote.link" target="_blank" class="home-quote__source">{{ quote.source || "Anonymous" }}</a> -->
   </figure>
-
 </template>
 
 <script>
@@ -40,7 +39,7 @@ export default {
     line-height: 1.2
     text-align: center
     font-weight: 300
-    font-size: 0.9rem
+    font-size: 1rem
 
   &__source
     width: 12rem
