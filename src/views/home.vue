@@ -44,5 +44,4 @@ export default {
     font-style: italic
     font-weight: 800
     letter-spacing: -0.01rem
-
 </style>
