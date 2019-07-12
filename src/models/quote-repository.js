@@ -2,8 +2,10 @@ export default class QuoteRepository {
   static quotes = [
     {
       text:
-        "Write your code as if the person who will end up maintaining it is a violent psychopath with your home address.",
-      source: "Reddit"
+        "Always code as if the guy who ends up maintaining your code will be a violent psychopath who knows where you live.",
+      source: "John F. Woods",
+      link:
+        "https://groups.google.com/forum/#!msg/comp.lang.c++/rYCO5yn4lXw/oITtSkZOtoUJ"
     },
     {
       text:
@@ -17,7 +19,7 @@ export default class QuoteRepository {
     },
     {
       text: "Truth is like poetry. And most people fucking hate poetry.",
-      source: "Overheard in a D.C. bar"
+      source: "Overheard in a D.C. bar by Michael Lewis"
     },
     {
       text:
@@ -145,6 +147,14 @@ export default class QuoteRepository {
     {
       text: "What kind of person quotes themselves on their own website?",
       source: "Kendra Song"
+    },
+    {
+      text: "If everyone is thinking alike, someone isn&rsquo;t thinking.",
+      source: "Gen. George S. Patton, Jr."
+    },
+    {
+      text: "There&rsquo;s always the risk that there are unknown unknowns.",
+      source: "Nate Silver"
     }
   ];
 
