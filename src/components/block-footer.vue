@@ -24,7 +24,7 @@
       target="_blank"
       class="block-footer__bottom-text block-footer__bottom-text--interactable"
     >
-      <i class="block-footer__version">{{ version }}</i>
+      <i class="block-footer__version">{{ version || "v" }}</i>
     </a>
   </footer>
 </template>
