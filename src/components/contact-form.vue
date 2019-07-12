@@ -69,16 +69,23 @@
         <div v-if="loading" class="spinner__container">
           <div class="spinner"></div>
         </div>
-        <div v-if="sent" id="sent" class="sent">Sent!</div>
       </transition>
+      <check-mark v-if="sent" class="sent"></check-mark>
+      <failed-x v-if="failed" class="sent"></failed-x>
     </div>
   </form>
 </template>
 
 <script>
 import axios from "axios";
+import CheckMark from "./check-mark.vue";
+import FailedX from "./failed-x.vue";
 
 export default {
+  components: {
+    CheckMark,
+    FailedX
+  },
   data: function() {
     return {
       name: "",
@@ -86,7 +93,8 @@ export default {
       email: "",
       message: "",
       loading: false,
-      sent: false
+      sent: false,
+      failed: false
     };
   },
   computed: {
@@ -111,13 +119,19 @@ export default {
           "Accept": "application/json",
           "Content-Type": "application/json"
         },
+        timeout: 5000,
         withCredentials: false,
         data: this.formData
       };
 
-      axios(request).then(() => {
-        this.finished();
-      });
+      axios(request).then(
+        () => {
+          this.finished();
+        },
+        () => {
+          this.errored();
+        }
+      );
     },
     sendButtonPressed: function() {
       let sendButton = document.getElementById("send-button");
@@ -128,13 +142,32 @@ export default {
     },
     finished: function() {
       let sendButton = document.getElementById("send-button");
-      sendButton.disabled = false;
-      sendButton.innerHTML = "Send";
       this.loading = false;
-      this.sent = true;
+      sendButton.innerHTML = "Sent!";
 
       setTimeout(() => {
+        this.sent = true;
+      }, 500);
+
+      setTimeout(() => {
+        sendButton.disabled = false;
+        sendButton.innerHTML = "Send";
         this.sent = false;
+      }, 3000);
+    },
+    errored: function() {
+      let sendButton = document.getElementById("send-button");
+      this.loading = false;
+      sendButton.innerHTML = "Failed";
+
+      setTimeout(() => {
+        this.failed = true;
+      }, 500);
+
+      setTimeout(() => {
+        this.failed = false;
+        sendButton.innerHTML = "Try again?";
+        sendButton.disabled = false;
       }, 3000);
     }
   }
@@ -228,8 +261,8 @@ export default {
       cursor: default
 
   .spinner
-    position: absolute
-    left: 60%
+    display: block
+    float: left
     // This is brilliant, and I can't take credit for it. This came from https://codepen.io/Beaugust/pen/DByiE.
     box-sizing: border-box
     width: 2.5rem
@@ -249,16 +282,15 @@ export default {
 
 
   .sent
-    position: absolute
-    left: 60%
-
+    display: block
+    float: left
     box-sizing: border-box
-    margin: 0.2rem 0rem
-    border: 1px solid rgba(255, 255, 255, 0)
-    padding: 1rem
 
-    font-weight: 800
-    font-style: italic
+    width: 30%
+    margin-top: 0.55rem
+    margin-left: 1rem
+    width: 2.5rem
+    height: 2.5rem
 
 .fade
   &-enter
