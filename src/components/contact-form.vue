@@ -218,6 +218,8 @@ export default {
     border: 1px solid $text-color
     padding: 0.5rem
 
+    cursor: text
+
     font-weight: 300
 
     &:focus

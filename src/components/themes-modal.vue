@@ -1,13 +1,13 @@
 <template>
   <transition name="modal">
-  <div class="modal" v-if="showThemes">
-    <button class="modal__x" @click="$emit('update:showThemes', !showThemes)">
-      &times;
-    </button>
-    <div class="modal__container">
-      <h3>Pick a theme</h3>
+    <div class="modal" v-if="showThemes">
+      <button class="modal__x" @click="$emit('update:showThemes', !showThemes)">
+        &times;
+      </button>
+      <div class="modal__container">
+        <h3>Pick a theme</h3>
+      </div>
     </div>
-  </div>
   </transition>
 </template>
 
@@ -75,5 +75,4 @@ export default {
 
     .modal__container
       animation: zoomOut 0.5s forwards
-
 </style>

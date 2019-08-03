@@ -33,9 +33,6 @@ export default {
 
   text-align: center
 
-  @include media("<tablet")
-    margin-left: 3rem
-
   &__title
     margin-top: 3%
     padding-top: 5vh

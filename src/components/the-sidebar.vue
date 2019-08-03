@@ -1,26 +1,54 @@
 <template>
-  <div id="nav" class="nav">
-    <router-link class="nav__item" to="/"><label>Home</label></router-link>
-    <router-link class="nav__item" to="/projects"><label>Projects</label></router-link>
-    <router-link class="nav__item" to="/resume"><label>Résumé</label></router-link>
-    <router-link class="nav__item" to="/contact"><label>Contact</label></router-link>
+  <div>
+    <div class="toggle__container" @click="toggleMenu">
+      <hamburger class="toggle__icon" />
+    </div>
+    <div id="nav" class="nav">
+      <router-link class="nav__item" to="/">
+        <label>Home</label>
+      </router-link>
+      <router-link class="nav__item" to="/projects">
+        <label>Projects</label>
+      </router-link>
+      <router-link class="nav__item" to="/resume">
+        <label>Résumé</label>
+      </router-link>
+      <router-link class="nav__item" to="/contact">
+        <label>Contact</label>
+      </router-link>
+    </div>
   </div>
 </template>
+
+<script>
+import Hamburger from "./hamburger.vue";
+
+export default {
+  components: {
+    Hamburger
+  },
+  methods: {
+    toggleMenu: function() {
+      this.$parent.$emit("toggleMenu", {});
+    }
+  }
+};
+</script>
 
 <style lang="sass">
 @import "../styles/variables"
 
 .nav
-  position: fixed
-  float: left
-
   display: flex
   flex-direction: column
   justify-content: space-between
   align-items: center
 
   height: 100vh
-  width: 3rem
+  width: 2.5rem
+
+  @include media("<tablet")
+    box-shadow: 0 0 5px $light-grey
 
   &__item
     display: flex
@@ -71,4 +99,24 @@
       transition: "background-color" .1s
       transition: color .1s
 
+.toggle
+  &__container
+    float: right
+
+    background-color: #fefefe
+    box-shadow: 0 0 5px $light-grey
+
+    border-right: 1px solid $text-color
+    border-bottom: 1px solid $text-color
+
+    @include media(">=tablet")
+      display: none
+
+  &__icon
+    width: 60px
+    height: 60px
+
+    padding: 0.5rem
+
+    cursor: pointer
 </style>

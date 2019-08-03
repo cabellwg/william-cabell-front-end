@@ -20,13 +20,13 @@
 </template>
 
 <script>
-import BlockFooter from "../components/block-footer.vue";
 import ContactForm from "../components/contact-form.vue";
+import BlockFooter from "../components/block-footer.vue";
 
 export default {
   components: {
-    BlockFooter,
-    ContactForm
+    ContactForm,
+    BlockFooter
   }
 };
 </script>
@@ -52,9 +52,6 @@ export default {
     border: none
 
     background-color: $text-color
-
-  @include media("<tablet")
-    margin-left: 3rem
 
   &__header
     margin-top: 0

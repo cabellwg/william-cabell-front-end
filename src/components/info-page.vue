@@ -8,18 +8,11 @@
     <section v-for="index of numberOfFields" :key="index" ref="sections">
       <slot :name="index"></slot>
     </section>
-
-    <block-footer class="block-footer--uncentered" />
   </div>
 </template>
 
 <script>
-import BlockFooter from "../components/block-footer.vue";
-
 export default {
-  components: {
-    BlockFooter
-  },
   props: ["numberOfFields"],
   mounted: function() {
     this.$refs.sections.forEach((section, index) => {
@@ -54,7 +47,6 @@ export default {
       background-color: $text-color
 
   > section
-    margin-left: 3rem
     padding: 7.5vh 5vh
 
     hr
@@ -74,8 +66,4 @@ export default {
   p
     font-weight: 300
     max-width: 768px
-
-.block-footer--uncentered
-  @include media("<tablet")
-    margin-left: 3rem
 </style>
