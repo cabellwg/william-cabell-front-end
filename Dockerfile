@@ -16,5 +16,6 @@ RUN yarn build --modern
 FROM nginx:1.17-alpine as prod
 LABEL maintainer=william16180@gmail.com
 
-COPY nginx.conf /etc/nginx/conf.d/default.conf
+COPY nginx.conf /etc/nginx/nginx.conf
+COPY nginx.server.conf /etc/nginx/conf.d/default.conf
 COPY --from=build /app/dist /usr/share/nginx/html
