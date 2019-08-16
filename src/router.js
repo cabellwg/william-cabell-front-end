@@ -1,10 +1,15 @@
 import Vue from "vue";
 import Router from "vue-router";
+
+// Top-level Pages
 const Home = () => import("./views/home.vue");
-const Projects = () => import("./views/projects.vue");
-const Resume = () => import("./views/resume.vue");
+const About = () => import("./views/about.vue");
+const Blog = () => import("./views/blog.vue");
 const Contact = () => import("./views/contact.vue");
 const NotFound = () => import("./views/not-found.vue");
+
+// Blog articles
+const ArrowsTheorem = () => import("./articles/arrows-theorem.vue");
 
 Vue.use(Router);
 
@@ -17,19 +22,24 @@ export default new Router({
       component: Home
     },
     {
-      path: "/projects",
-      name: "projects",
-      component: Projects
-    },
-    {
-      path: "/resume",
-      name: "resume",
-      component: Resume
-    },
-    {
       path: "/contact",
       name: "contact",
       component: Contact
+    },
+    {
+      path: "/blog",
+      name: "blog",
+      component: Blog
+    },
+    {
+      path: "/about",
+      name: "about",
+      component: About
+    },
+    {
+      path: "/arrows-theorem",
+      name: "arrows-theorem",
+      component: ArrowsTheorem
     },
     {
       path: "*",

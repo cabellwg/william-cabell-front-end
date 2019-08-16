@@ -1,17 +1,17 @@
 <template>
   <div>
-    <div class="toggle__container" @click="toggleMenu">
+    <div id="menuToggle" class="toggle__container" @click="toggleMenu">
       <hamburger class="toggle__icon" />
     </div>
     <div id="nav" class="nav">
       <router-link class="nav__item" to="/">
         <label>Home</label>
       </router-link>
-      <router-link class="nav__item" to="/projects">
-        <label>Projects</label>
+      <router-link class="nav__item" to="/about">
+        <label>About</label>
       </router-link>
-      <router-link class="nav__item" to="/resume">
-        <label>Résumé</label>
+      <router-link class="nav__item" to="/blog">
+        <label>Blog</label>
       </router-link>
       <router-link class="nav__item" to="/contact">
         <label>Contact</label>
@@ -30,6 +30,10 @@ export default {
   methods: {
     toggleMenu: function() {
       this.$parent.$emit("toggleMenu", {});
+
+      document
+        .getElementById("menuToggle")
+        .classList.toggle("toggle__container--open");
     }
   }
 };
@@ -45,7 +49,7 @@ export default {
   align-items: center
 
   height: 100vh
-  width: 2.5rem
+  width: $sidebar-width
 
   @include media("<tablet")
     box-shadow: 0 0 5px $light-grey
@@ -101,22 +105,29 @@ export default {
 
 .toggle
   &__container
-    float: right
+    position: fixed
+    bottom: 0
+    left: 0
 
     background-color: #fefefe
     box-shadow: 0 0 5px $light-grey
 
     border-right: 1px solid $text-color
-    border-bottom: 1px solid $text-color
+    border-top: 1px solid $text-color
+
+    transition: left 0.2s ease-in-out
 
     @include media(">=tablet")
       display: none
 
-  &__icon
-    width: 60px
-    height: 60px
+    &--open
+      left: $sidebar-width
 
-    padding: 0.5rem
+  &__icon
+    width: 52px
+    height: 52px
+
+    padding: 12px
 
     cursor: pointer
 </style>

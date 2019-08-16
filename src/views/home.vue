@@ -16,6 +16,19 @@ export default {
   components: {
     HomeQuote,
     BlockFooter
+  },
+  metaInfo: function() {
+    return {
+      title: "Home",
+      titleTemplate: "%s | William Cabell",
+      meta: [
+        {
+          name: "description",
+          content:
+            "You’re still here? It’s over! Go home! Go! (But click here first to see my cool website!)"
+        }
+      ]
+    };
   }
 };
 </script>

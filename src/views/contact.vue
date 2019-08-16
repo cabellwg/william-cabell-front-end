@@ -1,32 +1,45 @@
 <template>
-  <div class="contact">
-    <h1 class="contact__header">Contact</h1>
+  <page>
+    <div class="contact page__content" slot="main">
+      <h1 class="contact__title">Contact</h1>
 
-    <p class="contact__text">
-      You can email me at
-      <a href="mailto:william16180@gmail.com" class="contact__text--link">
-        william16180@gmail.com
-      </a>
-      or fill out this handy form, and I&rsquo;ll get back to you as soon as I
-      can!
-    </p>
+      <p class="contact__text">
+        You can email me at
+        <a href="mailto:william16180@gmail.com" class="contact__text--link">
+          william16180@gmail.com
+        </a>
+        or fill out this handy form, and I&rsquo;ll get back to you as soon as I
+        can!
+      </p>
 
-    <hr />
+      <hr />
 
-    <contact-form />
-
-    <block-footer />
-  </div>
+      <contact-form />
+    </div>
+  </page>
 </template>
 
 <script>
 import ContactForm from "../components/contact-form.vue";
-import BlockFooter from "../components/block-footer.vue";
+import Page from "../components/page.vue";
 
 export default {
   components: {
     ContactForm,
-    BlockFooter
+    Page
+  },
+  metaInfo: function() {
+    return {
+      title: "Contact",
+      titleTemplate: "%s | William Cabell",
+      meta: [
+        {
+          name: "description",
+          content:
+            "I met a traveler from an antique land, / Who said––“Use the contact form if you have any questions for me.”"
+        }
+      ]
+    };
   }
 };
 </script>
@@ -53,14 +66,14 @@ export default {
 
     background-color: $text-color
 
-  &__header
+  &__title
     margin-top: 0
-    padding-top: 5vh
 
     font-size: 1.7rem
     font-style: italic
     font-weight: 800
     letter-spacing: -0.01rem
+    color: $text-color
 
   &__text
     max-width: 15rem

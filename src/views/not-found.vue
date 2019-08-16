@@ -10,6 +10,24 @@
   </div>
 </template>
 
+<script>
+export default {
+  metaInfo: function() {
+    return {
+      title: "One of Us Fucked up",
+      titleTemplate: "%s | William Cabell",
+      meta: [
+        {
+          name: "description",
+          content:
+            "If you send your Facebook password through the contact form on my website it automatically hides it, see ********"
+        }
+      ]
+    };
+  }
+};
+</script>
+
 <style lang="sass">
 @import "../styles/variables"
 

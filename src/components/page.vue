@@ -23,4 +23,15 @@ export default {
 
   @include media("<tablet")
     margin-left: 0
+    padding-top: 150px
+
+.page__content
+  max-width: 768px
+  box-sizing: border-box
+
+  margin: 0 auto 25vh auto
+  padding: 3rem
+
+  @include media("<tablet")
+    padding: 1.5rem
 </style>

@@ -37,7 +37,7 @@ export default {
 
 .menu--mobile-hidden
   @include media("<tablet")
-    margin-left: -2.5rem
+    margin-left: -$sidebar-width
 
     #nav
       box-shadow: none

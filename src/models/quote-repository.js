@@ -50,18 +50,6 @@ export default class QuoteRepository {
       link: "https://twitter.com/SeargeDP/status/476619831232708608"
     },
     {
-      text: "Cogito ergo sum.",
-      source: "Descartes"
-    },
-    {
-      text: "To be is to do.",
-      source: "Socrates"
-    },
-    {
-      text: "To do is to be.",
-      source: "Jean-Paul Sartre"
-    },
-    {
       text: "Wallace! Amazon.ca, what&rsquo;s the website for that?",
       source: "Scott Pilgrim, Scott Pilgrim vs. the World"
     },
@@ -155,6 +143,19 @@ export default class QuoteRepository {
     {
       text: "There&rsquo;s always the risk that there are unknown unknowns.",
       source: "Nate Silver"
+    },
+    {
+      text:
+        "My name is Ozymandias, King of Kings; / Look on my Works, ye Mighty, and despair!",
+      source: "Ozymandias, Percy Bysshe Shelley",
+      link: "https://www.poetryfoundation.org/poems/46565/ozymandias"
+    },
+    {
+      text:
+        "I thought those Grapes were ripe, but I see now they are quite sour.",
+      source: "The Fox, The Fox and the Grapes",
+      link:
+        "http://www.gutenberg.org/files/11339/11339-h/11339-h.htm#THE_FOX_AND_THE_GRAPES"
     }
   ];
 
