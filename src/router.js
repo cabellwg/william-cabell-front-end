@@ -37,8 +37,8 @@ export default new Router({
       component: About
     },
     {
-      path: "/arrows-theorem",
-      name: "arrows-theorem",
+      path: "/blog/there-is-no-perfect-voting-system-and-ill-prove-it-to-you",
+      name: "there-is-no-perfect-voting-system-and-ill-prove-it-to-you",
       component: ArrowsTheorem
     },
     {

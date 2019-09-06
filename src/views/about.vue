@@ -4,21 +4,10 @@
       <h1 class="about__title">About</h1>
 
       <p class="about__text">
-        Beauty resides in abstraction. Not just the
-        <a
-          href="https://medium.com/@cancerian0684/what-are-four-basic-principles-of-object-oriented-programming-645af8b43727"
-          target="_blank"
-          class="about__text--link"
-          >object-oriented programming principle</a
-        >, but abstraction in the general sense. The
-        <a
-          href="https://en.wikipedia.org/wiki/Theory_of_forms"
-          target="_blank"
-          class="about__text--link"
-          >Platonic form</a
-        >
-        of an object, idea, or experience holds beauty in its purest
-        manifestation. I live my life chasing beautiful things.
+        I'm a curious, goal-oriented, hard-working mathematics major and
+        computer science minor at Virginia Tech. I have experience with DevOps,
+        developing full-stack web applications, evaluating application security,
+        and leading medium-sized dev teams.
       </p>
 
       <p class="about__text"></p>

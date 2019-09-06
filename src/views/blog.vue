@@ -4,7 +4,14 @@
       <h1 class="blog__page-title">Blog</h1>
 
       <div class="blog__articles">
-        <div class="blog__card" @click="goToArticle('arrows-theorem')">
+        <div
+          class="blog__card"
+          @click="
+            goToArticle(
+              'there-is-no-perfect-voting-system-and-ill-prove-it-to-you'
+            )
+          "
+        >
           <h4 class="blog__card-title">
             There Is No Perfect Voting System, and I&rsquo;ll Prove It to You
           </h4>
@@ -12,8 +19,8 @@
 
           <p class="blog__card-preview">
             On the cold, foggy northwestern shore of Lake Superior lies the
-            small city of Thunder Bay, Ontario. Not long after the beginning of
-            time for planet Earth, magma poured through
+            small city of Thunder Bay, Ontario. Not long after the fiery birth
+            of planet Earth, magma poured
           </p>
         </div>
       </div>
@@ -43,7 +50,7 @@ export default {
   },
   methods: {
     goToArticle: function(articleTitle) {
-      this.$router.push(articleTitle);
+      this.$router.push("/blog/" + articleTitle);
     }
   }
 };
