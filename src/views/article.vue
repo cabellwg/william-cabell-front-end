@@ -19,11 +19,6 @@ export default {
 <style lang="sass">
 @import "../styles/variables"
 
-#back-button
-  fill: none
-  stroke: $text-color
-  stroke-width: 15
-
 .article
   &__title
     margin-top: 0
