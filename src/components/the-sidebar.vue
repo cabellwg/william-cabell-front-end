@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <div id="menuToggle" class="toggle__container" @click="toggleMenu">
+  <div @click="toggleMenu">
+    <div id="menuToggle" class="toggle__container">
       <hamburger class="toggle__icon" />
     </div>
     <div id="nav" class="nav">
@@ -110,7 +110,7 @@ export default {
     left: 0
 
     background-color: #fefefe
-    box-shadow: 0 0 5px $light-grey
+    box-shadow: 3px 3px 4px $light-grey
 
     border-right: 1px solid $text-color
     border-top: 1px solid $text-color

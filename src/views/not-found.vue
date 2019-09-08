@@ -32,9 +32,6 @@ export default {
 @import "../styles/variables"
 
 .not-found
-  @include media("<tablet")
-    margin-left: 3rem
-
   &__heading
     margin-top: 0
     padding-top: 25vh
