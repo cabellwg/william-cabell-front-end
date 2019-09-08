@@ -6,7 +6,7 @@
           There Is No Perfect Voting System, and I&rsquo;ll Prove It to You
         </h1>
         <p class="article__metadata">
-          Friday, August 16, 2019
+          Friday, September 6, 2019
           <span class="article__metadata--divider"
             >&nbsp;&nbsp;|&nbsp;&nbsp;</span
           >

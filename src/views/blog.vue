@@ -15,7 +15,7 @@
           <h4 class="blog__card-title">
             There Is No Perfect Voting System, and I&rsquo;ll Prove It to You
           </h4>
-          <p class="blog__card-date">Friday, August 16, 2019</p>
+          <p class="blog__card-date">Friday, September 6, 2019</p>
 
           <p class="blog__card-preview">
             On the cold, foggy northwestern shore of Lake Superior lies the
