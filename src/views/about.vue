@@ -4,11 +4,84 @@
       <h1 class="about__title">About</h1>
 
       <p class="about__text">
-        I'm a curious, goal-oriented, hard-working mathematics major and
+        I&rsquo;m a curious, goal-oriented, hard-working mathematics major and
         computer science minor at Virginia Tech. I have experience with DevOps,
         developing full-stack web applications, evaluating application security,
-        and leading medium-sized dev teams. I've done lots of interesting
-        things:
+        and leading small to medium-sized dev teams.
+      </p>
+
+      <p class="about__text">
+        In my free time, I do triathlons with the VT triathlon club (I&rsquo;m
+        currently training for the Wilmington half Ironman), practice piano,
+        race sailboats, play chess, cook, read, and learn new programming
+        languages (the other day, I started writing a
+        <a
+          class="about__text--link"
+          href="https://github.com/cabellwg/deeprust"
+          target="_blank"
+          >chess computer in Rust</a
+        >! Look for blog articles about that in the future).
+      </p>
+
+      <p class="about__text">
+        This past summer, before my third and final year at Virginia Tech, I was
+        a data engineering intern at Capital One. I worked on the Snowflake
+        platform team, developing applications to support Capital One&rsquo;s
+        enterprise integration with
+        <a
+          class="about__text--link"
+          href="https://www.snowflake.com"
+          target="_blank"
+          >Snowflake</a
+        >. I worked with Bash, Python, SQL (SnowSQL), various AWS products,
+        Flask, Node.js, and Spring Boot. I improved the runtime of several
+        applications by a factor of up to 180 and found, reported, and developed
+        a workaround for a serious security vulnerability in Snowflake. I also
+        passed Capital One&rsquo;s internal Certified Secure Software Engineer
+        exam, which focuses on identifying, exploiting, and patching
+        <a
+          class="about__text--link"
+          href="https://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project"
+          target="_blank"
+          >OWASP top ten</a
+        >
+        web application vulnerabilities.
+      </p>
+
+      <p class="about__text">
+        My second year, I led the 14-person ECE subteam of Virginia Tech&rsquo;s
+        SailBOT design team. Everyone on the team (I especially) learned
+        valuable lessons about project management and software engineering best
+        practices. I wrote some data structures in C, some mathematical
+        algorithms in Python, and some Bash scripts to glue all of it together
+        into a CI pipeline. Our efforts earned us second place at
+        <a
+          class="about__text--link"
+          href="https://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project"
+          target="_blank"
+          >our annual competition</a
+        >.
+      </p>
+
+      <p class="about__text">
+        After my first year, I had an internship at PIEtech, a small company in
+        Powhatan, Virginia developing a SaaS suite for financial advisors called
+        MoneyGuidePro. There, I worked with other interns to design
+        <a
+          class="about__text--link"
+          href="https://github.com/cabellwg/monte-carlo"
+          target="_blank"
+          >stochastic models to create long-term forecasts for financial
+          portfolios</a
+        >, which they allowed us to open source at the end of the summer.
+      </p>
+
+      <p class="about__text">
+        My first year, I did some
+        <a class="about__text--link" :href="splittingLemmaPaper" target="_blank"
+          >research in category theory</a
+        >
+        (that ended up being mostly about groups).
       </p>
 
       <p class="about__text">
@@ -17,64 +90,23 @@
           class="about__text--link"
           href="http://cabelldesignstudio.com"
           target="_blank"
-          >website for my mom's interior design business</a
+          >website for my mom&rsquo;s interior design business</a
         >. If you stay on the page for long enough you can actually smell the
         noxious odors emanating from the JavaScript and PHP that I wrote as a
-        junior in high school.
-      </p>
-
-      <p class="about__text">
-        Freshman year of college, I did some
-        <a class="about__text--link" :href="splittingLemmaPaper" target="_blank"
-          >research in category theory</a
-        >
-        (that ended up being mostly about groups).
-      </p>
-
-      <p class="about__text">
-        After freshman year, I had an internship at PIEtech, a small company in
-        Powhatan, Virginia developing a SaaS application for financial advisors
-        with over 50% market share called MoneyGuidePro. There, I worked with
-        other interns to design
-        <a
-          class="about__text--link"
-          href="https://github.com/cabellwg/monte-carlo"
-          target="_blank"
-          >stochastic models of the long-term performance of financial
-          portfolios</a
-        >, which they allowed us to open source at the end of the summer.
+        junior in high school. Don&rsquo;t Inspect Element. I warned you.
       </p>
 
       <p class="about__text">
         Last year, my mom decided to transition from interior design to
-        painting, so she needed
+        painting, so obviously she needed
         <a
           class="about__text--link"
           href="http://elizabethcabellfineart.com"
           target="_blank"
-          >a new website</a
+          >a new website for that</a
         >
-        (which of course, I built for her from scratch).
-      </p>
-
-      <p class="about__text">
-        During the 2018-2019 school year, I led the ECE subteam of Virginia
-        Tech's SailBOT design team in rebuilding our codebase. Everyone on the
-        team (I especially) learned valuable lessons about project management
-        and software engineering best practices in the process. I wrote some
-        data structures in C, some mathematical algorithms in Python, and some
-        Bash and Make scripts to glue all of it together into a CI pipeline.
-      </p>
-
-      <p class="about__text">
-        This past summer, I was a tech intern at Capital One. I worked on the
-        Snowflake platform team, developing applications to support Capital
-        One's enterprise integration with the Snowflake data warehouse platform.
-        I worked with Python, SQL, Java, and JavaScript. I improved the runtime
-        of several applications by a factor of 180 and found, reported, and
-        developed a workaround for a serious security vulnerability in
-        Snowflake. I also passed Capital One's internal Certified Secure
-        Software Engineer exam.
+        (which I built with Vue, and am currently in the process of refactoring
+        and improving).
       </p>
     </main>
   </page>
