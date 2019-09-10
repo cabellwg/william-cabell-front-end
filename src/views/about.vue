@@ -23,6 +23,10 @@
         >! Look for blog articles about that in the future).
       </p>
 
+      <a class="about__resume-button" :href="resume" target="_blank">
+        View my resume
+      </a>
+
       <p class="about__text">
         This past summer, before my third and final year at Virginia Tech, I was
         a data engineering intern at Capital One. I worked on the Snowflake
@@ -108,6 +112,11 @@
         (which I built with Vue, and am currently in the process of refactoring
         and improving).
       </p>
+
+      <p class="about__text">
+        If you have any questions for me, feel free to
+        <a class="about__text--link" @click="$router.push('/contact')">ask</a>!
+      </p>
     </main>
   </page>
 </template>
@@ -115,6 +124,7 @@
 <script>
 import Page from "../components/page.vue";
 import splittingLemmaPaper from "../assets/Splitting_Lemma_Research_20180502.pdf";
+import resume from "../assets/Resume_201909.pdf";
 
 export default {
   components: {
@@ -134,7 +144,8 @@ export default {
   },
   data: function() {
     return {
-      splittingLemmaPaper
+      splittingLemmaPaper,
+      resume
     };
   }
 };
@@ -170,4 +181,32 @@ export default {
 
       &:hover
         color: $mid-grey
+
+  &__resume-button
+    display: block
+    box-sizing: border-box
+
+    width: 40%
+    margin: 5rem auto
+    border: 1px solid $text-color
+    padding: 1rem
+
+    background-color: $black
+
+    text-align: center
+    text-decoration: none
+    color: $bg-color
+
+    transition: "background-color" .1s
+    transition: color .1s
+    &:hover
+      background-color: $bg-color
+      color: $text-color
+      transition: "background-color" .1s
+      transition: color .1s
+
+    &[disabled]
+      background-color: $bg-color
+      color: $text-color
+      cursor: default
 </style>
