@@ -138,6 +138,10 @@ export default {
     border-collapse: separate
     border-spacing: 0
 
+    position: relative
+
+    -webkit-overflow-scrolling: touch
+
     font-weight: 300
     font-style: italic
     color: $text-color
@@ -151,7 +155,7 @@ export default {
     &-container
       width: 85%
       margin: 2rem 10% 2rem 5%
-      overflow-x: auto
+      overflow: auto
 
       @include media("<tablet")
         width: 95%
