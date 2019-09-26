@@ -85,7 +85,9 @@
         <a class="about__text--link" :href="splittingLemmaPaper" target="_blank"
           >research in category theory</a
         >
-        (that ended up being mostly about groups).
+        (that ended up being mostly about groups). I also scored a 9 on the
+        Putnam mathematical competition, ranking 1,448 of 4,638 (just shy of the
+        top third).
       </p>
 
       <p class="about__text">
