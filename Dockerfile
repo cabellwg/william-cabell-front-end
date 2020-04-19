@@ -1,5 +1,5 @@
 # Build stage
-FROM alpine:3.10 as build
+FROM alpine:3.11 as build
 LABEL maintainer=william16180@gmail.com
 
 RUN apk update && apk add --no-cache yarn

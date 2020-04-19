@@ -31,12 +31,8 @@
 
 <script>
 import axios from "axios";
-import ThemesModal from "../components/themes-modal.vue";
 
 export default {
-  components: {
-    ThemesModal
-  },
   data: function() {
     return {
       showThemes: false,

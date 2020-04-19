@@ -156,6 +156,13 @@ export default class QuoteRepository {
       source: "The Fox, The Fox and the Grapes",
       link:
         "http://www.gutenberg.org/files/11339/11339-h/11339-h.htm#THE_FOX_AND_THE_GRAPES"
+    },
+    {
+      text:
+        "&lsquo;And if I have got to exist again,&rsquo; I thought, &lsquo;and live once more under the control of some irresistible power, I won&rsquo;t be vanquished and humiliated.&rsquo;",
+      source: "The Dream of a Ridiculous Man, Fyodor Dostoevsky",
+      link:
+        "https://web.archive.org/web/20160607021411/https://gustavus.edu/threecrowns/files/The%20Dream%20of%20a%20Ridiculous%20Man,%20Fyodor%20Dostoevsky.pdf"
     }
   ];
 
