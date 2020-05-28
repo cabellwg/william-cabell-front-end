@@ -2,6 +2,14 @@
   <div id="app">
     <the-sidebar id="menu" class="menu menu--mobile-hidden" />
     <router-view />
+    <script
+      async
+      defer
+      src="https://scripts.simpleanalyticscdn.com/latest.js"
+    ></script>
+    <noscript
+      ><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt=""
+    /></noscript>
   </div>
 </template>
 
@@ -10,19 +18,19 @@ import TheSidebar from "./components/the-sidebar.vue";
 
 export default {
   components: {
-    TheSidebar
+    TheSidebar,
   },
-  created: function() {
+  created: function () {
     this.$on("toggleMenu", () => {
       this.toggleMenu();
     });
   },
   methods: {
-    toggleMenu: function() {
+    toggleMenu: function () {
       let menu = document.getElementById("menu");
       menu.classList.toggle("menu--mobile-hidden");
-    }
-  }
+    },
+  },
 };
 </script>
 
