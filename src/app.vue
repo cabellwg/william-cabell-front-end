@@ -2,6 +2,14 @@
   <div id="app">
     <the-sidebar id="menu" class="menu menu--mobile-hidden" />
     <router-view />
+    <script
+      async
+      defer
+      src="https://scripts.simpleanalyticscdn.com/latest.js"
+    ></script>
+    <noscript>
+      <img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" />
+    </noscript>
   </div>
 </template>
 
