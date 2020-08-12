@@ -4,7 +4,7 @@ LABEL maintainer=william16180@gmail.com
 
 RUN apk update && apk add --no-cache yarn
 
-COPY package.json yarn.lock /app/
+COPY package.json /app/
 WORKDIR /app
 RUN yarn && yarn upgrade
 
