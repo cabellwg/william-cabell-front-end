@@ -33,21 +33,21 @@
 import axios from "axios";
 
 export default {
-  data: function() {
+  data: function () {
     return {
       showThemes: false,
-      version: ""
+      version: "",
     };
   },
-  mounted: function() {
+  mounted: function () {
     axios
       .get(
         "https://api.github.com/repos/cabellwg/william-cabell-front-end/releases/latest"
       )
-      .then(response => {
+      .then((response) => {
         this.version = response.data.tag_name;
       });
-  }
+  },
 };
 </script>
 
@@ -74,14 +74,14 @@ export default {
       display: none
 
   &__logo
-    width: 2.5rem
-    margin: 1rem 1.5rem
+    width: 1.75rem
+    margin: 1rem 0.75rem
 
   &__bottom-text
     margin-bottom: 1rem
 
     text-align: center
-    font-size: 0.8rem
+    font-size: 0.6rem
     color: $mid-grey
     font-weight: 300
     text-decoration: none

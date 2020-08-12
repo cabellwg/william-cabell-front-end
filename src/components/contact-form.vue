@@ -84,9 +84,9 @@ import FailedX from "./failed-x.vue";
 export default {
   components: {
     CheckMark,
-    FailedX
+    FailedX,
   },
-  data: function() {
+  data: function () {
     return {
       name: "",
       organization: "",
@@ -94,21 +94,21 @@ export default {
       message: "",
       loading: false,
       sent: false,
-      failed: false
+      failed: false,
     };
   },
   computed: {
-    formData: function() {
+    formData: function () {
       return {
         name: this.name,
         organization: this.organization,
         email: this.email,
-        message: this.message
+        message: this.message,
       };
-    }
+    },
   },
   methods: {
-    sendMessage: function() {
+    sendMessage: function () {
       this.sendButtonPressed();
 
       let request = {
@@ -117,11 +117,11 @@ export default {
         headers: {
           // eslint-disable-next-line
           "Accept": "application/json",
-          "Content-Type": "application/json"
+          "Content-Type": "application/json",
         },
         timeout: 5000,
         withCredentials: false,
-        data: this.formData
+        data: this.formData,
       };
 
       axios(request).then(
@@ -133,14 +133,14 @@ export default {
         }
       );
     },
-    sendButtonPressed: function() {
+    sendButtonPressed: function () {
       let sendButton = document.getElementById("send-button");
       sendButton.disabled = true;
       sendButton.innerHTML = "Sending...";
       this.sent = false;
       this.loading = true;
     },
-    finished: function() {
+    finished: function () {
       let sendButton = document.getElementById("send-button");
       this.loading = false;
       sendButton.innerHTML = "Sent!";
@@ -155,7 +155,7 @@ export default {
         this.sent = false;
       }, 3000);
     },
-    errored: function() {
+    errored: function () {
       let sendButton = document.getElementById("send-button");
       this.loading = false;
       sendButton.innerHTML = "Failed";
@@ -169,8 +169,8 @@ export default {
         sendButton.innerHTML = "Try again?";
         sendButton.disabled = false;
       }, 3000);
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -265,7 +265,6 @@ export default {
   .spinner
     display: block
     float: left
-    // This is brilliant, and I can't take credit for it. This came from https://codepen.io/Beaugust/pen/DByiE.
     box-sizing: border-box
     width: 2.5rem
     height: 2.5rem

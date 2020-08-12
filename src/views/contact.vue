@@ -26,9 +26,9 @@ import Page from "../components/page.vue";
 export default {
   components: {
     ContactForm,
-    Page
+    Page,
   },
-  metaInfo: function() {
+  metaInfo: function () {
     return {
       title: "Contact",
       titleTemplate: "%s | William Cabell",
@@ -36,11 +36,11 @@ export default {
         {
           name: "description",
           content:
-            "I met a traveler from an antique land, / Who said––“Use the contact form if you have any questions for me.”"
-        }
-      ]
+            "I met a traveler from an antique land, / Who said––“Use the contact form if you have any questions for me.”",
+        },
+      ],
     };
-  }
+  },
 };
 </script>
 
@@ -50,10 +50,8 @@ export default {
 .contact
   display: flex
   flex-direction: column
-  justify-content: space-around
+  justify-content: space-between
   align-items: center
-
-  min-height: 100vh
 
   text-align: center
 
@@ -68,6 +66,7 @@ export default {
 
   &__title
     margin-top: 0
+    margin-bottom: 5vh
 
     font-size: 1.7rem
     font-style: italic
@@ -76,10 +75,10 @@ export default {
     color: $text-color
 
   &__text
-    max-width: 15rem
+    max-width: 500px
     width: 90%
 
-    text-align: left
+    text-align: center
     font-weight: 300
 
     &--link

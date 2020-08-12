@@ -7,10 +7,10 @@ import katex from "katex";
 
 export default {
   props: ["eqn", "display"],
-  mounted: async function() {
+  mounted: async function () {
     let mathOptions = {
       colorIsTextColor: true,
-      displayMode: this.display ? true : false // no type safety!
+      displayMode: this.display ? true : false, // no type safety!
     };
 
     if (this.display) {
@@ -20,7 +20,7 @@ export default {
     }
 
     katex.render(this.eqn, this.$el, mathOptions);
-  }
+  },
 };
 </script>
 

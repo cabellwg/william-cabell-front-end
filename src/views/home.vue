@@ -1,10 +1,7 @@
 <template>
   <main class="home">
-    <!-- <h2 class="home__title">William Cabell</h2> -->
-
-    <home-quote />
-
-    <block-footer />
+    <home-quote class="home__quote" />
+    <block-footer class="home__footer" />
   </main>
 </template>
 
@@ -15,9 +12,9 @@ import BlockFooter from "../components/block-footer.vue";
 export default {
   components: {
     HomeQuote,
-    BlockFooter
+    BlockFooter,
   },
-  metaInfo: function() {
+  metaInfo: function () {
     return {
       title: "Home",
       titleTemplate: "%s | William Cabell",
@@ -25,11 +22,11 @@ export default {
         {
           name: "description",
           content:
-            "You’re still here? It’s over! Go home! Go! (But click here first to see my cool website!)"
-        }
-      ]
+            "You’re still here? It’s over! Go home! Go! (But click here first to see my cool website!)",
+        },
+      ],
     };
-  }
+  },
 };
 </script>
 
@@ -37,13 +34,7 @@ export default {
 @import "../styles/variables"
 
 .home
-  display: flex
-  flex-direction: column
-  justify-content: space-around
-  align-items: center
-
   height: 100vh
-
   text-align: center
 
   @include media(">=tablet")
@@ -57,4 +48,16 @@ export default {
     font-style: italic
     font-weight: 800
     letter-spacing: -0.01rem
+
+  &__quote
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+
+  &__footer
+    position: absolute
+    bottom: 2rem
+    left: 50%
+    transform: translate(-50%, 0)
 </style>

@@ -7,11 +7,8 @@
       <router-link class="nav__item" to="/">
         <label>Home</label>
       </router-link>
-      <router-link class="nav__item" to="/about">
-        <label>About</label>
-      </router-link>
-      <router-link class="nav__item" to="/blog">
-        <label>Blog</label>
+      <router-link class="nav__item" to="/stuff">
+        <label>Stuff</label>
       </router-link>
       <router-link class="nav__item" to="/contact">
         <label>Contact</label>
@@ -25,17 +22,17 @@ import Hamburger from "./hamburger.vue";
 
 export default {
   components: {
-    Hamburger
+    Hamburger,
   },
   methods: {
-    toggleMenu: function() {
+    toggleMenu: function () {
       this.$parent.$emit("toggleMenu", {});
 
       document
         .getElementById("menuToggle")
         .classList.toggle("toggle__container--open");
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -84,15 +81,12 @@ export default {
       text-align: center
 
     &:nth-child(1)
-      background-color: $light-grey
-
-    &:nth-child(2)
       background-color: $mid-grey
 
-    &:nth-child(3)
+    &:nth-child(2)
       background-color: $dark-grey
 
-    &:nth-child(4)
+    &:nth-child(3)
       background-color: $black
 
     transition: "background-color" .1s

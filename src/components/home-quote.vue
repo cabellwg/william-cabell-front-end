@@ -15,9 +15,9 @@ import QuoteRepository from "../models/quote-repository";
 export default {
   data() {
     return {
-      quote: QuoteRepository.getRandomQuote()
+      quote: QuoteRepository.getRandomQuote(),
     };
-  }
+  },
 };
 </script>
 
@@ -34,9 +34,10 @@ export default {
   margin: 0
 
   &__text
-    width: 12rem
+    width: 20rem
+    max-width: 70%
     margin: 0
-    margin-bottom: 10vh
+    margin-bottom: 3vh
 
     line-height: 1.2
     text-align: center
@@ -55,5 +56,5 @@ export default {
     text-decoration: none
 
     &::before
-      content: "– "
+      content: "— "
 </style>

@@ -6,11 +6,11 @@
           There Is No Perfect Voting System, and I&rsquo;ll Prove It to You
         </h1>
         <p class="article__metadata">
-          Friday, September 6, 2019
+          September 2019
           <span class="article__metadata--divider"
             >&nbsp;&nbsp;|&nbsp;&nbsp;</span
           >
-          20 minute read
+          30 minute read
         </p>
       </section>
 
@@ -117,21 +117,21 @@
             href="https://www.vox.com/the-highlight/2019/8/7/20746147/congress-women-2019-gender-parity"
             target="_blank"
             class="article__body--link"
-            style="margin-right: 0.2rem"
+            style="margin-right: 0.2rem;"
             >in</a
           >
           <a
             href="https://newrepublic.com/article/118534/gerrymandering-efficiency-gap-better-way-measure-gerrymandering"
             target="_blank"
             class="article__body--link"
-            style="margin-right: 0.2rem"
+            style="margin-right: 0.2rem;"
             >vogue</a
           >
           <a
             href="https://www.politico.com/states/new-jersey/story/2019/03/20/lawmaker-introduces-bill-to-establish-ranked-choice-voting-in-new-jersey-921512"
             target="_blank"
             class="article__body--link"
-            style="margin-right: 0.2rem"
+            style="margin-right: 0.2rem;"
             >these</a
           >
           <a
@@ -298,7 +298,7 @@
         <div
           class="article__table-container article__table-container--with-caption"
         >
-          <table class="article__table" style="min-width: 521px">
+          <table class="article__table" style="min-width: 521px;">
             <tr class="article__table-row">
               <th class="article__table-heading"></th>
               <th class="article__table-heading">Citizen 1</th>
@@ -373,7 +373,7 @@
         <div
           class="article__table-container article__table-container--with-caption"
         >
-          <table class="article__table" style="min-width: 521px">
+          <table class="article__table" style="min-width: 521px;">
             <tr class="article__table-row">
               <th class="article__table-heading"></th>
               <th class="article__table-heading">Citizen 1</th>
@@ -437,9 +437,9 @@
         <p class="article__body">
           Again, because of unanimity, the outcome will rank
           <eqn eqn="B" /> higher than both <eqn eqn="A" /> and <eqn eqn="C" />.
-          We will call this <em>Configuration <eqn eqn="n"/></em>. Now that we
+          We will call this <em>Configuration <eqn eqn="n" /></em>. Now that we
           have two of the configurations, we can define all the other ones. Let
-          <em>Configuration <eqn eqn="i"/></em> be the configuration where
+          <em>Configuration <eqn eqn="i" /></em> be the configuration where
           <eqn eqn="i" /> voters hate <eqn eqn="B" /> and
           <eqn eqn="n - i" /> voters love <eqn eqn="B" />.
         </p>
@@ -449,7 +449,7 @@
         >
           <table
             class="article__table article__table--scrunch"
-            style="min-width: 518px"
+            style="min-width: 518px;"
           >
             <tr class="article__table-row">
               <th
@@ -558,7 +558,7 @@
           <eqn eqn="k = n" />, <eqn eqn="B" /> must beat <eqn eqn="A" /> at some
           point. We&rsquo;ll refer to citizen <eqn eqn="k" />, the citizen whose
           ballot causes <eqn eqn="B" /> to win, as the
-          <em>pivotal voter for <eqn eqn="B"/> over <eqn eqn="A"/></em>.
+          <em>pivotal voter for <eqn eqn="B" /> over <eqn eqn="A" /></em>.
           We&rsquo;ll name her Karen.
         </p>
       </section>
@@ -585,7 +585,7 @@
         <div
           class="article__table-container article__table-container--with-caption"
         >
-          <table class="article__table" style="min-width: 521px">
+          <table class="article__table" style="min-width: 521px;">
             <tr class="article__table-row">
               <th class="article__table-heading"></th>
               <th class="article__table-heading">Citizen 1</th>
@@ -654,7 +654,7 @@
         <div
           class="article__table-container article__table-container--with-caption"
         >
-          <table class="article__table" style="min-width: 529px">
+          <table class="article__table" style="min-width: 529px;">
             <tr class="article__table-row">
               <th
                 class="article__table-heading article__table-heading--scrunch"
@@ -754,7 +754,7 @@
           <eqn eqn="C" /> both would be preserved, so <eqn eqn="B" /> would
           still beat <eqn eqn="C" />. But only Karen prefers <eqn eqn="B" /> to
           <eqn eqn="C" />! Karen has become a
-          <em>dictator for <eqn eqn="B"/> over <eqn eqn="C"/></em>.
+          <em>dictator for <eqn eqn="B" /> over <eqn eqn="C" /></em>.
         </p>
       </section>
 
@@ -849,7 +849,7 @@
             href="https://en.wikipedia.org/wiki/Bayesian_regret"
             target="_blank"
             class="article__body--link"
-            style="margin-right: 0.2rem"
+            style="margin-right: 0.2rem;"
             >ways to</a
           >
           <a
@@ -871,10 +871,9 @@
           theorem tells us we will never make everyone happy. People will always
           disagree, someone will always lose, and someone will always win. Human
           society isn&rsquo;t perfect and can never be. But that&rsquo;s okay:
-          in utopia, no one ever invents, no one thinks more than they need to.
-          Problems drive innovation, and if we don&rsquo;t have any, the human
-          race will stagnate. Stability breeds stability, but who knows what
-          wonders chaos may bring.
+          in utopia, no one ever invents. Problems drive innovation; in their
+          absence, we stagnate. Stability breeds stability, but who knows what
+          wonders chaos can concieve.
         </p>
       </section>
 
@@ -905,9 +904,9 @@ import Eqn from "../components/eqn.vue";
 export default {
   components: {
     Article,
-    Eqn
+    Eqn,
   },
-  metaInfo: function() {
+  metaInfo: function () {
     return {
       title: "There Is No Perfect Voting System, and I’ll Prove It to You",
       titleTemplate: "%s | William Cabell",
@@ -915,20 +914,20 @@ export default {
         {
           name: "description",
           content:
-            "On the cold, foggy northwestern shore of Lake Superior lies the small city of Thunder Bay, Ontario. Not long after"
-        }
-      ]
+            "On the cold, foggy northwestern shore of Lake Superior lies the small city of Thunder Bay, Ontario. Not long after",
+        },
+      ],
     };
   },
-  data: function() {
+  data: function () {
     return {
-      footnoteIsOpen: []
+      footnoteIsOpen: [],
     };
   },
   methods: {
-    toggleFootnote: function(index) {
+    toggleFootnote: function (index) {
       this.$set(this.footnoteIsOpen, index, !this.footnoteIsOpen[index]);
-    }
-  }
+    },
+  },
 };
 </script>

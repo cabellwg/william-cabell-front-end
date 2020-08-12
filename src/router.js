@@ -3,13 +3,13 @@ import Router from "vue-router";
 
 // Top-level Pages
 const Home = () => import("./views/home.vue");
-const About = () => import("./views/about.vue");
-const Blog = () => import("./views/blog.vue");
+const Stuff = () => import("./views/stuff.vue");
 const Contact = () => import("./views/contact.vue");
 const NotFound = () => import("./views/not-found.vue");
 
-// Blog articles
+// Stuff
 const ArrowsTheorem = () => import("./articles/arrows-theorem.vue");
+// const CoronaClassical = () => import("./articles/corona-classical.vue");
 
 Vue.use(Router);
 
@@ -19,32 +19,32 @@ export default new Router({
     {
       path: "/",
       name: "home",
-      component: Home
+      component: Home,
     },
     {
       path: "/contact",
       name: "contact",
-      component: Contact
+      component: Contact,
     },
     {
-      path: "/blog",
-      name: "blog",
-      component: Blog
+      path: "/stuff",
+      name: "stuff",
+      component: Stuff,
     },
     {
-      path: "/about",
-      name: "about",
-      component: About
-    },
-    {
-      path: "/blog/there-is-no-perfect-voting-system-and-ill-prove-it-to-you",
+      path: "/stuff/there-is-no-perfect-voting-system-and-ill-prove-it-to-you",
       name: "there-is-no-perfect-voting-system-and-ill-prove-it-to-you",
-      component: ArrowsTheorem
+      component: ArrowsTheorem,
     },
+    // {
+    //   path: "/blog/a-classical-coronavirus-model",
+    //   name: "a-classical-coronavirus-model",
+    //   component: CoronaClassical,
+    // },
     {
       path: "*",
-      component: NotFound
-    }
+      component: NotFound,
+    },
   ],
   scrollBehavior(to, from, savedPosition) {
     if (savedPosition) {
@@ -52,5 +52,5 @@ export default new Router({
     } else {
       return { x: 0, y: 0 };
     }
-  }
+  },
 });

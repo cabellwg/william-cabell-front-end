@@ -12,7 +12,7 @@
 
 <script>
 export default {
-  metaInfo: function() {
+  metaInfo: function () {
     return {
       title: "One of Us Fucked up",
       titleTemplate: "%s | William Cabell",
@@ -20,11 +20,11 @@ export default {
         {
           name: "description",
           content:
-            "If you send your Facebook password through the contact form on my website it automatically hides it, see ********"
-        }
-      ]
+            "If you send your Facebook password through the contact form on my website it automatically hides it, see ********",
+        },
+      ],
     };
-  }
+  },
 };
 </script>
 

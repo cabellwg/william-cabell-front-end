@@ -1,23 +1,29 @@
 <template>
   <page>
-    <main slot="main" class="blog">
-      <h1 class="blog__page-title">Blog</h1>
+    <main slot="main" class="stuff">
+      <h1 class="stuff__title">Stuff</h1>
+      <p class="stuff__text">
+        Mostly about mathematics or software. Right now it&rsquo;s just a thing,
+        not stuff. But come back and maybe a new thing will appear.
+      </p>
 
-      <div class="blog__articles">
+      <hr />
+
+      <div class="stuff__articles">
         <div
-          class="blog__card"
+          class="stuff__card"
           @click="
             goToArticle(
               'there-is-no-perfect-voting-system-and-ill-prove-it-to-you'
             )
           "
         >
-          <h4 class="blog__card-title">
+          <h4 class="stuff__card-title">
             There Is No Perfect Voting System, and I&rsquo;ll Prove It to You
           </h4>
-          <p class="blog__card-date">Friday, September 6, 2019</p>
+          <p class="stuff__card-date">September 2019</p>
 
-          <p class="blog__card-preview">
+          <p class="stuff__card-preview">
             On the cold, foggy northwestern shore of Lake Superior lies the
             small city of Thunder Bay, Ontario. Not long after the fiery birth
             of planet Earth, magma poured
@@ -33,33 +39,33 @@ import Page from "../components/page.vue";
 
 export default {
   components: {
-    Page
+    Page,
   },
-  metaInfo: function() {
+  metaInfo: function () {
     return {
-      title: "Blog",
+      title: "Stuff",
       titleTemplate: "%s | William Cabell",
       meta: [
         {
           name: "description",
           content:
-            "I don’t think Facebook and the NSA have enough data about me so I decided to write a few blog articles to help them out."
-        }
-      ]
+            "I don’t think Facebook and the NSA have enough data about me so I decided to put some things here to help them out.",
+        },
+      ],
     };
   },
   methods: {
-    goToArticle: function(articleTitle) {
-      this.$router.push("/blog/" + articleTitle);
-    }
-  }
+    goToArticle: function (articleTitle) {
+      this.$router.push("/stuff/" + articleTitle);
+    },
+  },
 };
 </script>
 
 <style lang="sass" scoped>
 @import "../styles/variables"
 
-.blog
+.stuff
   max-width: 1360px
   box-sizing: border-box
 
@@ -69,14 +75,34 @@ export default {
   @include media("<tablet")
     padding: 1.5rem
 
-  &__page-title
+  hr
+    width: 20vw
+    max-width: 150px
+    height: 3px
+    margin: 3vh auto
+    border: none
+
+    background-color: $text-color
+
+  &__title
     margin-top: 0
-    margin-bottom: 3rem
+    margin-bottom: 5vh
+
     font-size: 1.7rem
     font-style: italic
     font-weight: 800
     letter-spacing: -0.01rem
+    color: $text-color
     text-align: center
+
+  &__text
+    max-width: 500px
+    width: 90%
+
+    text-align: center
+    font-weight: 300
+
+    margin: 3rem auto 2.25rem
 
   &__articles
     display: flex
@@ -95,8 +121,6 @@ export default {
 
     cursor: pointer
 
-    transition: box-shadow .1s
-
     @include media("<tablet")
       width: 100%
       min-width: 250px
@@ -108,7 +132,7 @@ export default {
     &:nth-child(3n+2)
       background-color: $text-color
 
-      .blog__card
+      .stuff__card
         &-title
           color: $bg-color
 
@@ -117,10 +141,6 @@ export default {
 
     &:nth-child(3n)
       border: 1px solid $text-color
-
-    &:hover
-      box-shadow: 3px 3px 4px $light-grey
-      transition: box-shadow .05s
 
     &-title
       margin-bottom: 0

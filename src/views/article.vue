@@ -1,6 +1,6 @@
 <template>
   <page>
-    <main slot="main" class="page__content">
+    <main slot="main" class="page__content article">
       <slot name="article" class="article"></slot>
     </main>
   </page>
@@ -11,8 +11,8 @@ import Page from "../components/page.vue";
 
 export default {
   components: {
-    Page
-  }
+    Page,
+  },
 };
 </script>
 
@@ -20,6 +20,9 @@ export default {
 @import "../styles/variables"
 
 .article
+  @include media("<phone")
+    padding-left: $sidebar-width
+
   &__title
     margin-top: 0
     margin-bottom: 2rem
@@ -40,8 +43,8 @@ export default {
       font-style: normal
 
   &__body
-    margin: 2rem 0
-    line-height: 1.4
+    margin: 1.45rem 0
+    line-height: 145%
     font-weight: 300
     color: $text-color
 

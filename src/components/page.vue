@@ -10,8 +10,8 @@ import BlockFooter from "./block-footer.vue";
 
 export default {
   components: {
-    BlockFooter
-  }
+    BlockFooter,
+  },
 };
 </script>
 
@@ -19,10 +19,7 @@ export default {
 @import "../styles/variables"
 
 .page
-  margin-left: 2.5rem
-
   @include media("<tablet")
-    margin-left: 0
     padding-top: 150px
 
 .page__content
